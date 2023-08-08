@@ -1,0 +1,2 @@
+# 💤 Neovim Config using LazyVim
+
