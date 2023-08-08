@@ -6,13 +6,13 @@
 -- import keymaps/save_on_system_clipboard.lua
 
 require("config/keymaps/clipboard")
-require("config/keymaps/tabs")
-require("config/keymaps/save")
-require("config/keymaps/navigation")
-require("config/keymaps/smartquit")
--- require("config/keymaps/movelines")
-require("config/keymaps/split-windows")
-require("config/keymaps/unredo")
+require("config/keymaps/movelines")
+require("config/keymaps/reload")
 require("config/keymaps/resizepane")
+require("config/keymaps/save")
 require("config/keymaps/sidebar")
-require("config/keymaps/buffers")
+require("config/keymaps/smartquit")
+require("config/keymaps/split-windows")
+require("config/keymaps/tabs")
+require("config/keymaps/unredo")
+-- we can use <leader> fb and <leader> b for buffers
