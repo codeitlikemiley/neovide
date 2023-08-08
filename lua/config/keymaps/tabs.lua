@@ -11,36 +11,6 @@ if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 or vim.fn.has("g
   nnoremap([[<D-8>]], [[<Cmd>BufferLineGoToBuffer 8<CR>]])
   nnoremap([[<D-9>]], [[<Cmd>BufferLineGoToBuffer 9<CR>]])
   nnoremap([[<D-0>]], [[<Cmd>BufferLineGoToBuffer 10<CR>]])
-else
-  nnoremap([[<space>1]], [[1gt<cr>]])
-
-  nnoremap([[<space>2]], [[2gt<cr>]])
-
-  nnoremap([[<space>3]], [[3gt<cr>]])
-
-  nnoremap([[<space>4]], [[4gt<cr>]])
-
-  nnoremap([[<space>5]], [[5gt<cr>]])
-
-  nnoremap([[<space>6]], [[6gt<cr>]])
-
-  nnoremap([[<space>7]], [[7gt<cr>]])
-
-  nnoremap([[<space>8]], [[8gt<cr>]])
-
-  nnoremap([[<space>9]], [[9gt<cr>]])
-
-  nnoremap([[<space>0]], [[10gt<cr>]])
-
-  nnoremap([[<leader>n]], [[:tabnew<cr>]])
-
-  nnoremap([[,qt]], [[:tabonly<cr>]])
-
-  nnoremap([[<leader>q]], [[:tabclose<cr>]])
-end
-
-if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 then
   nnoremap([[<D-n>]], [[:tabnew<cr>]])
   nnoremap([[<D-t>]], [[:tabnew<cr>]])
-  nnoremap([[<D-w>]], [[:tabclose<cr>]])
 end
