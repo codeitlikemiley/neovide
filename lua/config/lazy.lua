@@ -10,6 +10,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { import = "lazyvim.plugins.extras.ui.mini-starter" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.dap.core" },
@@ -19,15 +20,6 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    {
-      "hrsh7th/nvim-cmp",
-      dependencies = { "hrsh7th/cmp-emoji" },
-      ---@param opts cmp.ConfigSchema
-      opts = function(_, opts)
-        local cmp = require("cmp")
-        opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
-      end,
-    },
     -- import/override with your plugins
     { import = "plugins" },
   },
