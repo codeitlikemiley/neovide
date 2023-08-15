@@ -42,6 +42,11 @@ function run_cargo_test()
 
   local function_name = get_test_function_name()
 
+   -- if main.rs then filename = folder_name
+   if filename == "main" then
+     filename = folder_name
+   end
+
   -- Construct the cargo test command
   local cmd = "cargo test --package " .. folder_name .. " --bin " .. filename
 
@@ -52,6 +57,7 @@ function run_cargo_test()
   end
 
   -- cargo test --package topic_on_rust --bin name -- tests::test_first_name --exact --nocapture
+  -- cargo test --package rust-grpc-server --bin rust-grpc-server -- tests::test_check_auth --exact --nocapture
 
   -- Run the command in terminal
   vim.cmd("! " .. cmd)
