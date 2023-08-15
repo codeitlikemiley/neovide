@@ -2,6 +2,12 @@ return {
   { "nvim-neotest/neotest-plenary" },
   {
     "nvim-neotest/neotest",
-    opts = { adapters = { "neotest-plenary" } },
+    dependencies = {
+      "rouge8/neotest-rust",
+    },
+    opts = { adapters = {
+      "neotest-plenary",
+      ["neotest-rust"] = {},
+    } },
   },
 }
