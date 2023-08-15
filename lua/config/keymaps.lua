@@ -15,4 +15,6 @@ require("config/keymaps/smartquit")
 require("config/keymaps/split-windows")
 require("config/keymaps/tabs")
 require("config/keymaps/unredo")
+require("config/keymaps/cargo_test")
+require("config/keymaps/buffer_manager")
 -- we can use <leader> fb and <leader> b for buffers
