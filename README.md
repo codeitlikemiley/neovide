@@ -26,7 +26,7 @@ Must Have Installed, check the link on how to install it
 </summary>
 <br>
 
-
+## > Rust Specific Key Bindings
 <strong>Testing:</strong>
 
 <kbd>F1</kbd> === `RustRunnables`
@@ -46,15 +46,15 @@ Must Have Installed, check the link on how to install it
 
 <strong>Debugging:</strong>
 
-<kbd>CMD></kbd> +  <kbd>D</kbd>  ===  `Toggle Breakpoint``
+<kbd>CMD</kbd> +  <kbd>D</kbd>  ===  `Toggle Breakpoint``
 
-<kbd>CMD></kbd> +  <kbd>F1</kbd>  ===  `Continue`
+<kbd>CMD</kbd> +  <kbd>F1</kbd>  ===  `Continue`
 
-<kbd>CMD></kbd> +  <kbd>F2</kbd>  ===  `Step Over`
+<kbd>CMD</kbd> +  <kbd>F2</kbd>  ===  `Step Over`
 
-<kbd>CMD></kbd> +  <kbd>F3</kbd>  ===  `Step Into`
+<kbd>CMD</kbd> +  <kbd>F3</kbd>  ===  `Step Into`
 
-<kbd>CMD></kbd> +  <kbd>F4</kbd>  ===  `Step Out`
+<kbd>CMD</kbd> +  <kbd>F4</kbd>  ===  `Step Out`
 
 
 <strong>LSP</strong>
