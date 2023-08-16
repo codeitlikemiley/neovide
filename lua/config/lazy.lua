@@ -6,6 +6,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- only set if not nil
+if vim.fn.getenv("NEOVIDE_CWD") then
+  vim.api.nvim_set_current_dir(vim.fn.getenv("NEOVIDE_CWD"))
+end
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
