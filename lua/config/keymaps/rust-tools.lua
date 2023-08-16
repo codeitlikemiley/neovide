@@ -60,9 +60,7 @@ end
 -- Function to run the test command
 function run_cargo_test()
   -- get local current working directory
-  local cwd = vim.fn.getcwd()
-  -- modify it we only need the folder name eg. /home/user/folder_name
-  -- to folder_name
+  local cwd = vim.fn.getenv("NEOVIDE_CWD") or vim.fn.getcwd()
   local folder_name = cwd:match("^.+/(.+)$")
   -- Get the current line where the cursor is placed
 
@@ -107,7 +105,7 @@ function run_cargo_test()
   end
 
   -- Construct the cargo test command
-  local cmd = "cargo test --package " .. folder_name .. " --bin " .. filename
+  local cmd = "cd " .. cwd .. " && cargo test --package " .. folder_name .. " --bin " .. filename
 
   if inside_test_function and function_name then
     cmd = cmd .. " -- tests::" .. function_name .. " --exact --nocapture -q"
