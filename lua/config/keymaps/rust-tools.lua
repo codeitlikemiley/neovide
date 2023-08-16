@@ -5,7 +5,7 @@ local custom_attach = function(_, bufnr)
   -- Neovide Productive Keybindings
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
     -- CMD + R already binded to test on cursor on neovide
-    nnoremap([[<D-S-R>]], [[:lua run_cargo_test()<CR>]], true)
+    nnoremap([[<D-e>]], [[:lua run_cargo_test()<CR>]], true)
 
     nnoremap([[<D-i>]], [[:RustEnableInlayHints<CR>]], true)
     nnoremap([[<D-S-i>]], [[:RustDisableInlayHints<CR>]], true)
