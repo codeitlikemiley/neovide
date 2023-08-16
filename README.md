@@ -68,6 +68,8 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>P</kbd>  ===  `Search File`
 
 
+## Global Key Bindings
+
 ### <strong>File Editing</strong>
 
 <kbd>CMD</kbd> + <kbd>S</kbd>  ===  `Save`
