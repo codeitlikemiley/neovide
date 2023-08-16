@@ -45,7 +45,7 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>g</kbd>  ===  `Share to Rust Playground`
 
 
-<strong>Debugging:</strong>
+### <strong>Debugging:</strong>
 
 <kbd>CMD</kbd> +  <kbd>D</kbd>  ===  `Toggle Breakpoint``
 
@@ -58,7 +58,7 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> +  <kbd>F4</kbd>  ===  `Step Out`
 
 
-<strong>LSP</strong>
+### <strong>LSP</strong>
 
 
 <kbd>F2</kbd> === `Rename`
@@ -68,7 +68,7 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>P</kbd>  ===  `Search File`
 
 
-<strong>File Editing</strong>
+### <strong>File Editing</strong>
 
 <kbd>CMD</kbd> + <kbd>S</kbd>  ===  `Save`
 
@@ -81,7 +81,7 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>J,K</kbd> === `Move Line Up and Down`
 
 
-<strong>Tabs Navigation</strong>
+### <strong>Tabs Navigation</strong>
 
 
 <kbd>CMD</kbd> + <kbd>Q</kbd>  ===  `Quit`
