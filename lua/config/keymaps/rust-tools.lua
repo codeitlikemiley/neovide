@@ -5,7 +5,7 @@ local custom_attach = function(_, bufnr)
   -- Neovide Productive Keybindings
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
     -- CMD + R already binded to test on cursor on neovide
-    nnoremap([[<D-S-r>]], [[:lua run_cargo_test()<CR>]], true)
+    nnoremap([[<D-S-R>]], [[:lua run_cargo_test()<CR>]], true)
 
     nnoremap([[<D-i>]], [[:RustEnableInlayHints<CR>]], true)
     nnoremap([[<D-S-i>]], [[:RustDisableInlayHints<CR>]], true)
@@ -19,7 +19,13 @@ local custom_attach = function(_, bufnr)
     nnoremap([[<D-F4>]], [[:DapStepOut<CR>]], true)
 
     -- This is for linux and windows, note you should have neovide for alt to work
-  elseif vim.fn.has("unix") == 1 and vim.fn.exists("neovide") or vim.fn.has("win32") and vim.fn.has("gui_running") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") then
+  elseif
+    vim.fn.has("unix") == 1 and vim.fn.exists("neovide")
+    or vim.fn.has("win32")
+      and vim.fn.has("gui_running") == 1
+      and vim.fn.exists("neovide") == 1
+      and vim.fn.has("gui_running")
+  then
     nnoremap([[<M-S-r>]], [[:lua run_cargo_test()<CR>]], true)
 
     nnoremap([[<M-i>]], [[:RustEnableInlayHints<CR>]], true)
@@ -50,7 +56,6 @@ local custom_attach = function(_, bufnr)
   -- Rust File Only
   nnoremap([[<leader>rs]], [[:execute "RustStartStandaloneServerForBuffer" | LspStop<CR>]])
 end
-
 
 -- Function to run the test command
 function run_cargo_test()
