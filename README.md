@@ -26,8 +26,9 @@ Must Have Installed, check the link on how to install it
 </summary>
 <br>
 
-## > Rust Specific Key Bindings
-<strong>Testing:</strong>
+##  Rust Specific Key Bindings
+
+### <strong>Testing:</strong>
 
 <kbd>F1</kbd> === `RustRunnables`
 
