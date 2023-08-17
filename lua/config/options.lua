@@ -20,3 +20,8 @@ if vim.fn.has('macunix') == 1 and vim.fn.exists('neovide') == 1 then
 
   vim.g.neovide_input_macos_alt_is_meta = true
 end
+
+-- delete swap files
+vim.cmd [[
+  command! DeleteSwaps !find $HOME/.local/state/nvim/swap -type f -name "*.sw?" -exec rm {} \;
+]]
