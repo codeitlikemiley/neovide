@@ -18,5 +18,5 @@ if vim.fn.has('macunix') == 1 and vim.fn.exists('neovide') == 1 then
   -- pressing OPT would not be translated to ALT
   -- Notable example is on `movelines.lua`
 
-  vim.g.neovide_input_macos_alt_is_meta = false
+  vim.g.neovide_input_macos_alt_is_meta = true
 end
