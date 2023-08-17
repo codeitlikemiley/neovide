@@ -55,7 +55,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ### <strong>Debugging:</strong>
 
-<kbd>CMD</kbd> + <strong>`</strong> === `Toggle Debugger UI`
+<kbd>CMD</kbd> + ` === `Toggle Debugger UI`
 
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint``
 
