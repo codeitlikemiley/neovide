@@ -2,7 +2,8 @@
     "Lua.diagnostics.globals": [
         "vim",
         "run_cargo_test",
-        "get_rust_test_fn_name"
+        "get_rust_test_fn_name",
+        "jit"
     ],
     "editor.acceptSuggestionOnEnter": "on",
 }
