@@ -8,6 +8,7 @@ require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
 require("config/keymaps/sidebar") -- [CMD] + b to toggle sidebar
 require("config/keymaps/split-windows") -- [vsp] and [sp]  split windows
 require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
+require("config/keymaps/swap") -- delete swap files <leader> [dS]
 
 -- Keymaps for editing , manipulating text
 require("config/keymaps/clipboard") -- paste with [CMD] + v , Y to yank whole line
