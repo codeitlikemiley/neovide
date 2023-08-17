@@ -47,7 +47,7 @@ Must Have Installed, check the link on how to install it
 
 ### <strong>Debugging:</strong>
 
-<kbd>CMD</kbd> + <kbd>`</kbd> === `Toggle Debugger UI`
+<kbd>CMD</kbd> + <strong>`</strong> === `Toggle Debugger UI`
 
 <kbd>CMD</kbd> + <kbd>d</kbd> === `Toggle Breakpoint``
 
@@ -59,19 +59,13 @@ Must Have Installed, check the link on how to install it
 
 <kbd>CMD</kbd> + <kbd>F4</kbd> === `Step Out`
 
-### <strong>LSP</strong>
 
-<kbd>F2</kbd> === `Rename`
+</details>
 
-<kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
-
-<kbd>CMD</kbd> + <kbd>P</kbd> === `Search File`
-
-<kbd>f</kbd> === `Jump to Char Forward`
-
-<kbd>F</kbd> === `Jump to Char Forward`
-
-## Global Key Bindings
+<details>
+<summary>
+Global Key Bindings
+</summary>
 
 ### <strong>File Editing</strong>
 
@@ -98,6 +92,21 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>B</kbd> === `Toggle Sidebar`
 
 <kbd>CTRL</kbd> + <kbd>H,J,K,L</kbd> === `Pane Navigation`
+
+
+### <strong>LSP</strong>
+
+<kbd>F2</kbd> === `Rename`
+
+<kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
+
+<kbd>CMD</kbd> + <kbd>P</kbd> === `Search File`
+
+<kbd>f</kbd> === `Jump to Char Forward`
+
+<kbd>F</kbd> === `Jump to Char Forward`
+
+<kbd>/</kbd> === `Search for Characters`
 
 </details>
 
