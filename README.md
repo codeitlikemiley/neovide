@@ -133,6 +133,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 | <code>&lt;leader&gt;rH</code> | Rust Enable Inlay Hints | **n** |
 | <code>&lt;leader&gt;ru</code> | Toggle Debug UI | **n** |
 | <code>&lt;leader&gt;rs</code> | Rust Standalone Server | **n** |
+| <code>&lt;leader&gt;dS</code> | Delete Swap Files | **n** |
 
 </details>
 
