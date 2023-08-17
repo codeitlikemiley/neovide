@@ -104,12 +104,27 @@ Must Have Installed, check the link on how to install it
 
 <br>
 
-<code>
-require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
-require("config/keymaps/sidebar") -- [CMD] + b to toggle sidebar
-require("config/keymaps/split-windows") -- [vsp] and [sp]  split windows
-require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
-</code>
+`config/keymaps/navigation`
+
+<strong>navigation panes with <kbd>CMD</kbd> + <kbd>h,j,k,l</kbd></strong>
+
+<br>
+
+`config/keymaps/sidebar`
+
+<strong><kbd>CMD</kbd> + b to toggle sidebar</strong>
+
+<br>
+
+`config/keymaps/split-windows`
+
+<strong>split windows <kbd>vsp</kbd> and <kbd>sp</kbd></strong>
+
+<br>
+
+`config/keymaps/resizepane`
+
+<strong> resize panes with <kbd>--</kbd> , <kbd>==</kbd> , <kbd>\_\_</kbd>, and <kbd>++</kbd>
 
 <br>
 
@@ -117,13 +132,35 @@ require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
 
 <br>
 
-<code>
-require("config/keymaps/clipboard") -- paste with [CMD] + v , Y to yank whole line
-require("config/keymaps/unredo") -- [CMD] + z and [CMD] +y
-require("config/keymaps/save") -- [CMD] + s to save
-require("config/keymaps/reload") -- [shift] + f5 to reload
-require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up and down
-</code>
+`config/keymaps/clipboard`
+
+<strong>Clipboard Pasting with <kbd>CMD</kbd> + <kbd>v</kbd> and <kbd>Y</kbd> to yank Line</strong>
+
+<br>
+
+`config/keymaps/undoredo`
+
+<strong>UNDO and REDO with <kbd>CMD</kbd>+<kbd>z</kbd> and <kbd>CMD</kbd>+<kbd>Y</kbd></strong>
+
+<br>
+
+`config/keymaps/save`
+
+<strong>Save Files with <kbd>CMD</kbd>+<kbd>S</kbd></strong>
+
+<br>
+
+`config/keymaps/reload`
+
+<strong>Reload Vim Config with <kbd>Shift</kbd>+<kbd>f5</kbd></strong>
+
+<br>
+
+`config/keymaps/movelines`
+
+<strong>Move lines Up and Down with <kbd>OPT</kbd>+ <kbd>J/K</kbd></strong>
+
+<br>
 
 <br>
 
@@ -131,11 +168,21 @@ require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up 
 
 <br>
 
-<code>
-require("config/keymaps/smartquit") -- [qq] to smart quit
-require("config/keymaps/tabs") -- [CMD] + 1-9 to switch tabs, [CMD] + w to close tab , [CMD] + n to open new tab
-require("config/keymaps/buffer_manager") -- [bp, bn, bd ,bq] to manage buffers
-</code>
+`config/keymaps/smartquit`
+
+<strong> Smart Quit with <kbd>qq</kbd></strong>
+
+<br>
+
+`config/keymaps/tabs`
+
+<strong>Switch Tabs with <kbd>CMD</kbd>+<kbd>1-9</kbd> , close tab with <kbd>CMD</kbd>+ <kbd>w</kbd> , new tab with <kbd>CMD</kbd>+ <kbd>n</kbd></strong>
+
+<br>
+
+`config/keymaps/buffer_manager`
+
+<strong> Previous Buffer <kbd>bp</kbd>,Next Buffer <kbd>bn</kbd>, Delete Buffer <kbd>bd</kbd>, Quit all Buffers Except Current <kbd>bq</kbd> </strong>
 
 <br>
 
