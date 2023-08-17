@@ -3,17 +3,22 @@
 -- Add any additional keymaps here
 -- This file is automatically loaded by lazyvim.config.init
 
--- import keymaps/save_on_system_clipboard.lua
+-- Keymaps for quickly moving around panes and resizing panes
+require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
+require("config/keymaps/sidebar") -- [CMD] + b to toggle sidebar
+require("config/keymaps/split-windows") -- [vsp] and [sp]  split windows
+require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
 
-require("config/keymaps/clipboard")
-require("config/keymaps/movelines")
-require("config/keymaps/reload")
-require("config/keymaps/resizepane")
-require("config/keymaps/save")
-require("config/keymaps/sidebar")
-require("config/keymaps/smartquit")
-require("config/keymaps/split-windows")
-require("config/keymaps/tabs")
-require("config/keymaps/unredo")
-require("config/keymaps/buffer_manager")
--- we can use <leader> fb and <leader> b for buffers
+-- Keymaps for editing , manipulating text
+require("config/keymaps/clipboard") -- paste with [CMD] + v , Y to yank whole line
+require("config/keymaps/unredo") -- [CMD] + z and [CMD] +y
+require("config/keymaps/save") -- [CMD] + s to save
+require("config/keymaps/reload") -- [shift] + f5 to reload
+require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up and down
+
+-- manage buffers
+require("config/keymaps/smartquit") -- [qq] to smart quit
+require("config/keymaps/tabs") -- [CMD] + 1-9 to switch tabs, [CMD] + w to close tab , [CMD] + n to open new tab
+require("config/keymaps/buffer_manager") -- [bp, bn, bd ,bq] to manage buffers
+-- <leader> fb to open buffer list
+-- <leader> b

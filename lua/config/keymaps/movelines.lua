@@ -1,11 +1,9 @@
-local map = require("utils/map")
-
--- Move Lines
+-- Move Lines using Opt + [j,k] on Neovide Only
 if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 then
-  map("n", "<D-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-  map("n", "<D-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-  map("i", "<D-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-  map("i", "<D-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-  map("v", "<D-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-  map("v", "<D-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+  vim.keymap.set("n", "∆", ":m .+1<CR>==", { silent = true, desc = "Move Line Down with OPT + j" })
+  vim.keymap.set("n", "˚", ":m .-2<CR>==", { silent = true, desc = "Move Line Up with OPT + k" })
+  vim.keymap.set("i", "∆", "<Esc>:m .+1<CR>==gi", { silent = true, desc = "Move Line Down with OPT +j" })
+  vim.keymap.set("i", "˚", "<Esc>:m .-2<CR>==gi", { silent = true, desc = "Move Line Up with OPT + k" })
+  vim.keymap.set("v", "∆", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move Line Down with OPT + j" })
+  vim.keymap.set("v", "˚", ":m '<-2<CR>gv=gv", { silent = true, desc = "Move Line Up with OPT + k" })
 end
