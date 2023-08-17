@@ -105,7 +105,7 @@ Must Have Installed, check the link on how to install it
 <strong>Keymaps.lua
 </summary>
 <br>
-```sh
+<code>
 -- Keymaps for quickly moving around panes and resizing panes
 require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
 require("config/keymaps/sidebar") -- [CMD] + b to toggle sidebar
@@ -123,7 +123,7 @@ require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up 
 require("config/keymaps/smartquit") -- [qq] to smart quit
 require("config/keymaps/tabs") -- [CMD] + 1-9 to switch tabs, [CMD] + w to close tab , [CMD] + n to open new tab
 require("config/keymaps/buffer_manager") -- [bp, bn, bd ,bq] to manage buffers
-```
+</code>
 <details>
 
 #### [Learn Lazy Vim Keymaps](https://www.lazyvim.org/keymaps)
