@@ -47,12 +47,10 @@ function run_cargo_test()
   end
 
   -- Construct the cargo test command
-  local cmd = "cd " .. cwd .. " && cargo nextest --package " .. folder_name .. " --bin " .. filename
+  local cmd = "RUSTFLAGS='-A warnings' cargo nextest run -p " .. folder_name .. " --bin " .. filename
 
   if inside_test_function and function_name then
-    cmd = cmd .. " -- tests::" .. function_name .. " --exact --nocapture -q"
-  else
-    cmd = cmd .. " -- --exact --nocapture -q"
+    cmd = cmd .. " -- tests::" .. function_name
   end
 
   vim.cmd("! " .. cmd)
