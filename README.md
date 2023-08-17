@@ -69,6 +69,8 @@ Global Key Bindings
 
 ### <strong>File Editing</strong>
 
+<kbd>F2</kbd> === `Rename`
+
 <kbd>CMD</kbd> + <kbd>S</kbd> === `Save`
 
 <kbd>CMD</kbd> + <kbd>V</kbd> === `Paste`
@@ -96,17 +98,47 @@ Global Key Bindings
 
 ### <strong>LSP</strong>
 
-<kbd>F2</kbd> === `Rename`
-
 <kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Search File`
+
+> Built in LSP keybindings
+
+| Key | Description | Mode |
+| --- | --- | --- |
+| <code>&lt;leader&gt;cd</code> | Line Diagnostics | **n** |
+| <code>&lt;leader&gt;cl</code> | Lsp Info | **n** |
+| <code>gd</code> | Goto Definition | **n** |
+| <code>gr</code> | References | **n** |
+| <code>gD</code> | Goto Declaration | **n** |
+| <code>gI</code> | Goto Implementation | **n** |
+| <code>gy</code> | Goto T[y]pe Definition | **n** |
+| <code>K</code> | Hover | **n** |
+| <code>gK</code> | Signature Help | **n** |
+| <code>&lt;c-k&gt;</code> | Signature Help | **i** |
+| <code>]d</code> | Next Diagnostic | **n** |
+| <code>[d</code> | Prev Diagnostic | **n** |
+| <code>]e</code> | Next Error | **n** |
+| <code>[e</code> | Prev Error | **n** |
+| <code>]w</code> | Next Warning | **n** |
+| <code>[w</code> | Prev Warning | **n** |
+| <code>&lt;leader&gt;cf</code> | Format Document | **n** |
+| <code>&lt;leader&gt;cf</code> | Format Range | **v** |
+| <code>&lt;leader&gt;ca</code> | Code Action | **n**, **v** |
+| <code>&lt;leader&gt;cA</code> | Source Action | **n** |
+| <code>&lt;leader&gt;cr</code> | Rename | **n** |
+
+### <strong>Jumping Around</strong>
 
 <kbd>f</kbd> === `Jump to Char Forward`
 
 <kbd>F</kbd> === `Jump to Char Forward`
 
-<kbd>/</kbd> === `Search for Characters`
+### <strong> Searching </strong>
+
+<kbd>/</kbd> === `Search for Characters` ,  to search forward `n` and `N` for backward
+
+<kbd>gw</kbd> === `Search Word under cursor` , to search forward `n` and `N` for backward
 
 </details>
 
