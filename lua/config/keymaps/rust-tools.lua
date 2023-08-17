@@ -1,5 +1,5 @@
 -- Load the run_cargo_test function
-require("utils/run_cargo_test")
+local run_cargo_test = require("utils/run_cargo_test")
 
 local custom_attach = function(_, bufnr)
   -- MacOS Keymaps

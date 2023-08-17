@@ -1,4 +1,4 @@
-local function get_rust_test_fn_name()
+ function get_rust_test_fn_name()
     local cursor_line, _ = unpack(vim.api.nvim_win_get_cursor(0))
     local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
 

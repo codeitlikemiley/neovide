@@ -1,4 +1,4 @@
-local get_rust_test_fn_name = require "get_rust_test_fn_name"
+local get_rust_test_fn_name = require("utils/get_rust_test_fn_name")
 
 function run_cargo_test()
   -- get local current working directory
@@ -57,3 +57,4 @@ function run_cargo_test()
 
   vim.cmd("! " .. cmd)
 end
+ return run_cargo_test
