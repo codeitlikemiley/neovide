@@ -4,9 +4,9 @@ local run_cargo_test = require("utils/run_cargo_test")
 local custom_attach = function(_, bufnr)
   -- MacOS Keymaps
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
-    vim.keymap.set("n", "<D-R>", ":lua run_cargo_test()<CR>", { silent = true, desc = "Run Cargo Test" })
-    vim.keymap.set("n", "<D-i>", ":RustEnableInlayHints<CR>", { silent = true, desc = "Enable Inlay Hints" })
-    vim.keymap.set("n", "<D-I>", ":RustDisableInlayHints<CR>", { silent = true, desc = "Disable Inlay Hints" })
+    vim.keymap.set("n", "<D-r>", ":RunRust", { silent = true, desc = "Rust Run App" })
+    vim.keymap.set("n", "<D-t>", ":lua run_cargo_test()<CR>", { silent = true, desc = "Run Test" })
+    vim.keymap.set("n", "<D-x>", ":RustExpandMacro<CR>", { silent = true, desc = "Rust Expand Macro" })
     vim.keymap.set("n", "<D-d>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
     vim.keymap.set("n", "<D-g>", ":RustPlay<CR>", { silent = true, desc = "Play Rust" })
     vim.keymap.set("n", "<D-F1>", ":DapContinue<CR>", { silent = true, desc = "Dap Continue" })
@@ -22,9 +22,9 @@ local custom_attach = function(_, bufnr)
       and vim.fn.exists("neovide") == 1
       and vim.fn.has("gui_running")
   then
-    vim.keymap.set("n", "<M-S-r>", ":lua run_cargo_test()<CR>", { silent = true, desc = "Run Cargo Test" })
-    vim.keymap.set("n", "<M-i>", ":RustEnableInlayHints<CR>", { silent = true, desc = "Enable Inlay Hints" })
-    vim.keymap.set("n", "<M-S-i>", ":RustDisableInlayHints<CR>", { silent = true, desc = "Disable Inlay Hints" })
+    vim.keymap.set("n", "<M-r>", ":RustRun", { silent = true, desc = "Rust Run App" })
+    vim.keymap.set("n", "<M-t>", ":lua run_cargo_test()<CR>", { silent = true, desc = "Run Test" })
+    vim.keymap.set("n", "<M-x>", ":RustExpandMacro<CR>", { silent = true, desc = "Rust Run App" })
     vim.keymap.set("n", "<M-d>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
     vim.keymap.set("n", "<M-g>", ":RustPlay<CR>", { silent = true, desc = "Play Rust" })
     vim.keymap.set("n", "<M-F1>", ":DapContinue<CR>", { silent = true, desc = "Dap Continue" })
@@ -43,9 +43,17 @@ local custom_attach = function(_, bufnr)
   vim.keymap.set("n", "<leader>rr", ":RustRunnables<CR>", { silent = true, desc = "Run Cargo Test" })
   vim.keymap.set("n", "<leader>rd", ":RustDebuggables<CR>", { silent = true, desc = "Rust Debuggables" })
   vim.keymap.set("n", "<leader>rm", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
+
+  vim.keymap.set("n", "<leader>hs", ":RustEnableInlayHints<CR>", { silent = true, desc = "Show Rust Inlay Hint" })
+  vim.keymap.set("n", "<leader>hd", ":RustDisableInlayHints<CR>", { silent = true, desc = "Disable Rust Inlay Hint" })
   -- Note press <leader> d  , is used for debugging in dap , so no need to map it here
 
+  -- Show Rust Deb UI
+  vim.keymap.set('n', '<D-`>', ":lua require('dapui').toggle(); vim.cmd('Neotree position=right')<CR>", { noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>rx', ":lua require('dapui').toggle(); vim.cmd('Neotree position=right')<CR>", { noremap = true, silent = true, desc = "Toggle Debugger UI" })
+
+  -- Useful for Single file Rust
   vim.keymap.set("n", "<leader>rs", ':execute "RustStartStandaloneServerForBuffer" | LspStop<CR>',
-    { silent = true, desc = "Rust Start Standalone Server" })
+    { silent = true, desc = "Rust Standalone Server for Single File" })
 end
 return custom_attach
