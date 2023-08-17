@@ -1,6 +1,10 @@
 # Rust IDE with Neovide for Lazy Vim Users
 
-> Better workflow , testing and debugging capability
+> Better workflow , testing and debugging capability on your Next Rust Projects
+
+TODO:
+ - Quick Video Tutorial on How to Set this Up
+ - Tutorial on How I Used the Keybindings on my Mac
 
 <details>
 <summary>
@@ -16,8 +20,6 @@ Must Have Installed, check the link on how to install it
 - [Nerd Font](https://www.nerdfonts.com)
 
 - [Neovide](https://neovide.dev)
-
-- a C compiler for nvim-treesitter. See here
 
 - [Cargo Nexttest](https://nexte.st)
 
@@ -188,3 +190,6 @@ Some Built in Keybindings by Lazy Nvim
 </details>
 
 #### [For More Built in Keymaps of Lazy Nvim Check this out](https://www.lazyvim.org/keymaps)
+
+
+#### [Solution to Known Issues with Neovide on Mac](https://github.com/neovide/neovide/issues/1982)
