@@ -55,7 +55,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ### <strong>Debugging:</strong>
 
-<kbd>CMD</kbd> + <code>`</code> === `Toggle Debugger UI`
+<kbd>CMD</kbd> + <code>\\`</code> === `Toggle Debugger UI`
 
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint``
 
@@ -79,13 +79,18 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>Z</kbd> === `Undo`
 
-> Note: move lines `Up and Down` dont have `Linux or Windows` keybindings counterpart
+<kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
+
+<kbd>CMD</kbd> + <kbd>M</kbd> === `Expand Rust Macro`
+
+
+> Note: this is for MacOS users only
 
 <kbd>OPT</kbd> + <kbd>J,K</kbd> === `Move Line Up and Down`
 
 ### <strong> Navigation</strong>
 
-> Note: this is the Default on Mac , this is not binded at all
+> Note: Quit binding on MacOS
 
 <kbd>CMD</kbd> + <kbd>Q</kbd> === `Quit`
 
@@ -109,15 +114,11 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
-> Note: this is very useful if we have some errors on warning we want to navigate quickly in our code
-
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Diagnostic on Workspace`
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Search Warnings and Linting Errors`
 
 ### <strong>LSP</strong>
 
-<kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
 
-<kbd>CMD</kbd> + <kbd>M</kbd> === `Expand Rust Macro`
 
 ### <strong>Rust Leader Commands</strong>
 
@@ -136,6 +137,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 | <code>&lt;leader&gt;rs</code> | Rust Standalone Server        | **n** |
 | <code>&lt;leader&gt;rv</code> | Reload Vim Configuration      | **n** |
 | <code>&lt;leader&gt;dS</code> | Delete Swap Files             | **n** |
+
+<hr>
 
 </details>
 
