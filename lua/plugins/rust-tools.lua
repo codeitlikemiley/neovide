@@ -17,6 +17,7 @@ return {
     end
     return {
       server = {
+        -- all keybindings related to rust is attached to this function
         on_attach = on_attach,
         -- standalone file support
         -- setting it to false may improve startup time
