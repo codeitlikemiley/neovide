@@ -100,7 +100,9 @@ Must Have Installed, check the link on how to install it
 
 <br>
 
-> Keymaps for quickly moving around panes and resizing panes
+> <strong>Keymaps for quickly moving around panes and resizing panes</strong>
+
+<br>
 
 <code>
 require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
@@ -109,7 +111,11 @@ require("config/keymaps/split-windows") -- [vsp] and [sp]  split windows
 require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
 </code>
 
-> Keymaps for editing , manipulating text
+<br>
+
+> <strong>Keymaps for editing , manipulating text</strong>
+
+<br>
 
 <code>
 require("config/keymaps/clipboard") -- paste with [CMD] + v , Y to yank whole line
@@ -119,13 +125,19 @@ require("config/keymaps/reload") -- [shift] + f5 to reload
 require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up and down
 </code>
 
-> manage buffers
+<br>
+
+> <strong>Manage buffers</strong>
+
+<br>
 
 <code>
 require("config/keymaps/smartquit") -- [qq] to smart quit
 require("config/keymaps/tabs") -- [CMD] + 1-9 to switch tabs, [CMD] + w to close tab , [CMD] + n to open new tab
 require("config/keymaps/buffer_manager") -- [bp, bn, bd ,bq] to manage buffers
 </code>
+
+<br>
 
 <details>
 
