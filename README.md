@@ -39,13 +39,17 @@ Must Have Installed, check the link on how to install it
 
 <kbd>CMD</kbd> + <kbd>r</kbd> === `Run App`
 
-<kbd>CMD</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd> === Run Test Under Cursor
+<kbd>CMD</kbd> + <kbd>t</kbd> === Run Test Under Cursor
 
 <kbd>CMD</kbd> + <kbd>g</kbd> === `Share to Rust Playground`
 
+<kbd>CMD</kbd> + <kbd>x</kbd> === `Expand Macros on Rust`
+
 ### <strong>Debugging:</strong>
 
-<kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint``
+<kbd>CMD</kbd> + <kbd>`</kbd> === `Toggle Debugger UI`
+
+<kbd>CMD</kbd> + <kbd>d</kbd> === `Toggle Breakpoint``
 
 <kbd>CMD</kbd> + <kbd>F1</kbd> === `Continue`
 
@@ -62,6 +66,10 @@ Must Have Installed, check the link on how to install it
 <kbd>CMD</kbd> + <kbd>.</kbd> === `Code Actions`
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Search File`
+
+<kbd>f</kbd> === `Jump to Char Forward`
+
+<kbd>F</kbd> === `Jump to Char Forward`
 
 ## Global Key Bindings
 
