@@ -1,18 +1,5 @@
-local nnoremap = require("utils/nnoremap")
-
--- Previous
-nnoremap([[bp]], [[:bprevious<CR>]])
--- Next
-nnoremap([[bn]], [[:bnext<CR>]])
--- List
-nnoremap([[bl]], [[:ls<CR>]])
--- Delete
-nnoremap([[bd]], [[:bp <BAR> bd #<CR>]])
-
--- Delete all buffers except Currenly Open
-nnoremap([[bq]], [[:w <bar> %bd <bar> e# <bar> bd# <CR>]])
-
--- TAB in normal mode will move to text buffer
-nnoremap("<TAB>", ":bnext<CR>")
--- SHIFT-TAB will go back
-nnoremap("<S-TAB>", ":bprevious<CR>")
+vim.keymap.set( "n", "bp", ":bprevious<CR>", {  desc = "Go to Previous Buffer",  silent = true })
+vim.keymap.set( "n", "bn", ":bnext<CR>", {  desc = "Go to Next Buffer",  silent = true })
+vim.keymap.set( "n", "bl", ":ls<CR>", {  desc = "List all BUffers",  silent = true })
+vim.keymap.set( "n", "bd", ":bp <BAR> bd #<CR>", {  desc = "Delete Current Buffer",  silent = true })
+vim.keymap.set( "n", "bq", ":w <bar> %bd <bar> e# <bar> bd# <CR>", {  desc = "Delete All Buffer Except Current",  silent = true })

@@ -1,6 +1,7 @@
 {
     "Lua.diagnostics.globals": [
-        "vim"
+        "vim",
+        "run_cargo_test"
     ],
-    "editor.acceptSuggestionOnEnter": "on"
+    "editor.acceptSuggestionOnEnter": "on",
 }
