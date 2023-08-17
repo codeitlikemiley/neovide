@@ -123,18 +123,19 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 > Note: Leader Key is <kbd>space</kbd>
 
-| Key | Description | Mode |
-| <code>&lt;leader&gt;rt</code> | Run Test Under Cursor | **n** |
-| <code>&lt;leader&gt;rr</code> | Rust Runnables | **n** |
-| <code>&lt;leader&gt;rl</code> | List Test Summary | **n** |
-| <code>&lt;leader&gt;rd</code> | Rust Debuggables | **n** |
-| <code>&lt;leader&gt;rm</code> | Rust Expand Macro | **n** |
-| <code>&lt;leader&gt;rh</code> | Rust Disable Inlay Hints | **n** |
-| <code>&lt;leader&gt;rH</code> | Rust Enable Inlay Hints | **n** |
-| <code>&lt;leader&gt;ru</code> | Toggle Debug UI | **n** |
-| <code>&lt;leader&gt;rs</code> | Rust Standalone Server | **n** |
-| <code>&lt;leader&gt;rv</code> | Reload Vim Configuration | **n** |
-| <code>&lt;leader&gt;dS</code> | Delete Swap Files | **n** |
+| Key                           | Description                   | Mode  |
+|-------------------------------|-------------------------------|-------|
+| <code>&lt;leader&gt;rt</code> | Run Test Under Cursor         | **n** |
+| <code>&lt;leader&gt;rr</code> | Rust Runnables                | **n** |
+| <code>&lt;leader&gt;rl</code> | List Test Summary             | **n** |
+| <code>&lt;leader&gt;rd</code> | Rust Debuggables              | **n** |
+| <code>&lt;leader&gt;rm</code> | Rust Expand Macro             | **n** |
+| <code>&lt;leader&gt;rh</code> | Rust Disable Inlay Hints      | **n** |
+| <code>&lt;leader&gt;rH</code> | Rust Enable Inlay Hints       | **n** |
+| <code>&lt;leader&gt;ru</code> | Toggle Debug UI               | **n** |
+| <code>&lt;leader&gt;rs</code> | Rust Standalone Server        | **n** |
+| <code>&lt;leader&gt;rv</code> | Reload Vim Configuration      | **n** |
+| <code>&lt;leader&gt;dS</code> | Delete Swap Files             | **n** |
 
 </details>
 
