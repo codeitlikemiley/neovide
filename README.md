@@ -37,6 +37,10 @@ Must Have Installed, check the link on how to install it
 </summary>
 <br>
 
+### <strong>Show All Keymaps</strong>
+
+<kbd>leader</kbd>+<kbd>k</kbd> === `RustRunnables`
+
 Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ### <strong>Testing:</strong>
@@ -117,6 +121,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
 <kbd>CMD</kbd> + <kbd>W</kbd> === `Find Open Buffers`
+
+<kbd>CTRL</kbd> + <kbd>E</kbd> === `Open Recent Files`
 
 ### <strong>LSP</strong>
 
