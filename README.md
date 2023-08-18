@@ -49,17 +49,17 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>F5</kbd> === `Reload Workspace`
 
-<kbd>CMD</kbd> + <kbd>r</kbd> === `Run App`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Run App`
 
-<kbd>CMD</kbd> + <kbd>e</kbd> === Run Test Under Cursor
+<kbd>CMD</kbd> + <kbd>E</kbd> === Run Test Under Cursor
 
-<kbd>CMD</kbd> + <kbd>e</kbd> === `Debug Test Under Cursor`
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor`
 
 ### <strong>Debugging:</strong>
 
 <kbd>CMD</kbd> + `backtick` === `Toggle Debugger UI`
 
-<kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint``
+<kbd>CMD</kbd> + <kbd>X</kbd> === `Toggle Breakpoint``
 
 <kbd>CMD</kbd> + <kbd>F1</kbd> === `Step Over`
 
@@ -92,13 +92,11 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ### <strong> Navigation</strong>
 
-> Note: Quit binding on MacOS
+> Note: You need to Rebind CMD + Q to use Smart Quit (optional) , defaults to Quit `Neovide`
 
-<kbd>CMD</kbd> + <kbd>Q</kbd> === `Quit`
+<kbd>CMD</kbd> + <kbd>Q</kbd> === `Smart Quit`
 
 <kbd>CMD</kbd> + <kbd>N</kbd> === `New Tab`
-
-<kbd>CMD</kbd> + <kbd>W</kbd> === `Close Tab`
 
 <kbd>CMD</kbd> + <kbd>[1-9]</kbd> === `Switch Tab [1-9]`
 
@@ -116,7 +114,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Search Warnings and Linting Errors`
+<kbd>CMD</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
 
 ### <strong>LSP</strong>
 
