@@ -27,7 +27,6 @@ local custom_attach = function(_, bufnr)
   )
   vim.keymap.set("n", "<F5>", ":RustReloadWorkspace<CR>", { silent = true, desc = "Reload Rust Workspace" })
 
-  -- <leader> r - is reserved for all rust related keymaps
   vim.keymap.set("n", "<leader>rt", ':lua require("neotest").run.run()<CR>', { silent = true, desc = "Cargo Test" })
   vim.keymap.set("n", "<leader>rr", ":RustRunnables<CR>", { silent = true, desc = "Rust Runnables" })
   vim.keymap.set(
