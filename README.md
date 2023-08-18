@@ -39,7 +39,7 @@ Must Have Installed, check the link on how to install it
 
 ### <strong>Show All Keymaps</strong>
 
-<kbd>leader</kbd>+<kbd>k</kbd> === `RustRunnables`
+<kbd>leader</kbd>+<kbd>k</kbd> === `List and Search All Keymaps`
 
 Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
