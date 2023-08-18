@@ -40,9 +40,8 @@ Must Have Installed, check the link on how to install it
 
 ### <strong>Show All Keymaps</strong>
 
-<kbd>leader</kbd>+<kbd>k</kbd> === `List and Search All Keymaps`
 
-<kbd>OPT</kbd>+<kbd>A</kbd> === `List and Search All Keymaps`
+<kbd>SHIFT</kbd>+<kbd>SPACE</kbd> === `List and Search All Keymaps`
 
 Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
