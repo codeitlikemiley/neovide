@@ -3,8 +3,8 @@
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
 TODO:
- - Quick Video Tutorial on How to Set this Up
- - Tutorial on How I Used the Keybindings on my Mac
+ - Add Spellcheck
+ - Add Snippets
 
 <details>
 <summary>
