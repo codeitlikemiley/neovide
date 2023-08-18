@@ -192,4 +192,4 @@ Some Built in Keybindings by Lazy Nvim
 #### [For More Built in Keymaps of Lazy Nvim Check this out](https://www.lazyvim.org/keymaps)
 
 
-#### [Solution to Known Issues with Neovide on Mac](https://github.com/neovide/neovide/issues/1982)
+#### [Solution to Known Issues with Neovide on Mac](https://github.com/neovide/neovide/discussions/1984)
