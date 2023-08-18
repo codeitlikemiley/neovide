@@ -4,7 +4,8 @@
 
 TODO:
  - Add Spellcheck
- - Add Snippets
+ - Add [Snippets](https://www.lazyvim.org/plugins/coding)
+ - Add [VsCode](https://www.lazyvim.org/extras/vscode)
 
 <details>
 <summary>
