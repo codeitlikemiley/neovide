@@ -1,11 +1,24 @@
+function RustToggleInlayHints()
+  if vim.g.rust_inlay_hints_enabled then
+    vim.cmd("RustDisableInlayHints")
+    vim.g.rust_inlay_hints_enabled = false
+  else
+    vim.cmd("RustEnableInlayHints")
+    vim.g.rust_inlay_hints_enabled = true
+  end
+end
+
+vim.g.rust_inlay_hints_enabled = true
+
 local custom_attach = function(_, bufnr)
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
     -- MacOS Keymaps
     vim.keymap.set("n", "<D-r>", ":RunRust", { silent = true, desc = "Rust Run App" })
     vim.keymap.set("n", "<D-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
+    vim.keymap.set("n", "<D-i>", ":lua RustToggleInlayHints()<CR>", { silent = true, desc = "Toggle Rust Inlay Hint" })
   elseif
-    vim.fn.has("unix") == 1 and vim.fn.exists("neovide")
-    or vim.fn.has("win32")
+      vim.fn.has("unix") == 1 and vim.fn.exists("neovide")
+      or vim.fn.has("win32")
       and vim.fn.has("gui_running") == 1
       and vim.fn.exists("neovide") == 1
       and vim.fn.has("gui_running")
