@@ -19,7 +19,7 @@ local custom_attach = function(_, bufnr)
   -- Function keys
   vim.keymap.set("n", "<F1>", ":RustRunnables<CR>", { silent = true, desc = "Rust Runnables" })
   vim.keymap.set("n", "<F3>", ":RustDebuggables<CR>", { silent = true, desc = "Rust Debuggables" })
-  vim.keymap.set("n", "<F4>", ":!cargo test -- --ignored<CR>", { silent = true, desc = "Run Ignored Tests" })
+  vim.keymap.set("n", "<F4>", ":lua require(\"neotest\").summary.toggle()<CR>", { silent = true, desc = "Test Summary" })
   vim.keymap.set("n", "<F5>", ":RustReloadWorkspace<CR>", { silent = true, desc = "Reload Rust Workspace" })
 
   -- <leader> r - is reserved for all rust related keymaps
