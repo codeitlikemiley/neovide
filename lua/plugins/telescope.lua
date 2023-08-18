@@ -49,8 +49,7 @@ return {
     { "<D-p>", find_files_on_workspace, desc = "Open Files on Current Working Directory" },
     { "<C-r>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
     { "<M-r>", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
-    { "<leader>k", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-    { "<M-a>", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
+    { "<S-space>", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
     { "<D-w>", "<cmd>Telescope buffers<cr>", desc = "Open Files on Current Working Directory" },
   },
 }
