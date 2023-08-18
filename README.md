@@ -94,7 +94,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 > Note: You need to Rebind CMD + Q to use Smart Quit (optional) , defaults to Quit `Neovide`
 
-<kbd>CMD</kbd> + <kbd>Q</kbd> === `Smart Quit`
+<kbd>CMD</kbd> + <kbd>Q</kbd> === `Quit All`
 
 <kbd>CMD</kbd> + <kbd>N</kbd> === `New Tab`
 
@@ -103,6 +103,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 <kbd>CMD</kbd> + <kbd>B</kbd> === `Toggle Sidebar`
 
 ## <strong>Telescope</strong>
+
+<kbd>CMD</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
 
 <kbd>CMD</kbd> + <kbd>F</kbd> === `Find Everything on Workspace`
 
@@ -114,7 +116,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
-<kbd>CMD</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
+<kbd>CMD</kbd> + <kbd>W</kbd> === `Find Open Buffers`
 
 ### <strong>LSP</strong>
 
