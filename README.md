@@ -75,6 +75,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>F4</kbd> === `Continue`
 
+<kbd>CMD</kbd> + <kbd>i</kbd> === `Rust Toggle Inlay Hints`
+
 ### <strong>File Editing</strong>
 
 <kbd>F2</kbd> === `Rename`
@@ -133,9 +135,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 <kbd>CTRL</kbd> + <kbd>R</kbd> === `Recent Files`
 
 <kbd>OPT</kbd> + <kbd>R</kbd> === `Recent (CWD)`
-
-### <strong>LSP</strong>
-
 
 
 ### <strong>Rust Leader Commands</strong>
