@@ -38,14 +38,19 @@ return {
   "nvim-telescope/telescope.nvim",
   keys = {
     { "<D-d>", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
+    { "<M-d>", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
     -- add a keymap to browse plugin files
     { "<D-f>", Util.telescope("live_grep"), desc = "Find Everyting on Workspace" },
+    { "<M-f>", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
     { "<D-g>", lazygit, desc = "Open Lazy Git" },
-    { "<D-i>", find_document_symbols, desc = "Go to Symbols on Current Open File" },
+    { "<M-g>", "::DiffviewFileHistory %<CR>", desc = "Diff File History" },
     { "<D-o>", find_dynamic_workspace_symbols, desc = "Go to Symbol on Workspace" },
+    { "<M-o>", find_document_symbols, desc = "Go to Symbols on Current Open File" },
     { "<D-p>", find_files_on_workspace, desc = "Open Files on Current Working Directory" },
-    { "<C-e>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+    { "<C-r>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+    { "<M-r>", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
     { "<leader>k", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
+    { "<M-a>", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
     { "<D-w>", "<cmd>Telescope buffers<cr>", desc = "Open Files on Current Working Directory" },
   },
 }
