@@ -44,6 +44,8 @@ return {
     { "<D-i>", find_document_symbols, desc = "Go to Symbols on Current Open File" },
     { "<D-o>", find_dynamic_workspace_symbols, desc = "Go to Symbol on Workspace" },
     { "<D-p>", find_files_on_workspace, desc = "Open Files on Current Working Directory" },
+    { "<C-e>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+    { "<leader>k", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
     { "<D-w>", "<cmd>Telescope buffers<cr>", desc = "Open Files on Current Working Directory" },
   },
 }
