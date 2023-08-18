@@ -45,7 +45,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>F3</kbd> === `RustDebuggables`
 
-<kbd>F4</kbd> === `Run Ignored Tests`
+<kbd>F4</kbd> === `Toggle Test Summary`
 
 <kbd>F5</kbd> === `Reload Workspace`
 
