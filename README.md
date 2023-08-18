@@ -41,6 +41,8 @@ Must Have Installed, check the link on how to install it
 
 <kbd>leader</kbd>+<kbd>k</kbd> === `List and Search All Keymaps`
 
+<kbd>OPT</kbd>+<kbd>A</kbd> === `List and Search All Keymaps`
+
 Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ### <strong>Testing:</strong>
@@ -110,19 +112,27 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
 
+<kbd>OPT</kbd> + <kbd>D</kbd> === `Document Diagnostics`
+
 <kbd>CMD</kbd> + <kbd>F</kbd> === `Find Everything on Workspace`
+
+<kbd>OPT</kbd> + <kbd>F</kbd> === `Find on Files (CWD)`
 
 <kbd>CMD</kbd> + <kbd>G</kbd> === `Open Lazy Git`
 
-<kbd>CMD</kbd> + <kbd>I</kbd> === `Go to Symbols on Current Open File`
+<kbd>OPT</kbd> + <kbd>G</kbd> === `Diff File History`
 
 <kbd>CMD</kbd> + <kbd>O</kbd> === `Go to Symbols on Workspace`
+
+<kbd>OPT</kbd> + <kbd>O</kbd> === `Go to Symbols on Current Open File`
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
 <kbd>CMD</kbd> + <kbd>W</kbd> === `Find Open Buffers`
 
-<kbd>CTRL</kbd> + <kbd>E</kbd> === `Open Recent Files`
+<kbd>CTRL</kbd> + <kbd>R</kbd> === `Recent Files`
+
+<kbd>OPT</kbd> + <kbd>R</kbd> === `Recent (CWD)`
 
 ### <strong>LSP</strong>
 
