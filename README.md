@@ -2,10 +2,6 @@
 
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
-TODO:
- - Add Spellcheck
- - Add [Snippets](https://www.lazyvim.org/plugins/coding)
- - Add [VsCode](https://www.lazyvim.org/extras/vscode)
 
 <details>
 <summary>
