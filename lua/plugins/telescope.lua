@@ -37,11 +37,13 @@ end
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
+    { "<D-d>", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
     -- add a keymap to browse plugin files
     { "<D-f>", Util.telescope("live_grep"), desc = "Find Everyting on Workspace" },
     { "<D-g>", lazygit, desc = "Open Lazy Git" },
     { "<D-i>", find_document_symbols, desc = "Go to Symbols on Current Open File" },
     { "<D-o>", find_dynamic_workspace_symbols, desc = "Go to Symbol on Workspace" },
     { "<D-p>", find_files_on_workspace, desc = "Open Files on Current Working Directory" },
+    { "<D-w>", "<cmd>Telescope buffers<cr>", desc = "Open Files on Current Working Directory" },
   },
 }
