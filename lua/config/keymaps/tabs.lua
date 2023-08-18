@@ -9,5 +9,4 @@ if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 or vim.fn.has("g
   vim.keymap.set("n", "<D-8>", "<Cmd>BufferLineGoToBuffer 8<CR>", { silent = true, desc = "Go to Tab 8" })
   vim.keymap.set("n", "<D-9>", "<Cmd>BufferLineGoToBuffer 9<CR>", { silent = true, desc = "Go to Tab 9" })
   vim.keymap.set("n", "<D-n>", ":tabnew<cr>", { silent = true, desc = "New Tab" })
-  vim.keymap.set("n", "<D-w>", '<cmd>lua require("utils/smartquit")()<CR>', { silent = true, desc = "Smart Close Tab" })
 end
