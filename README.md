@@ -210,7 +210,10 @@ Some Built in Keybindings by Lazy Nvim
 
 
 <details>
-<summary>[Checkout Built in Snippets with Rust](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)</summary>
+
+<summary>Checkout Built-in Snippets with Rust</summary>
+  <a href="https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json">Click here to view the snippets</a>
+</details>
 
 ### A
 - allow
@@ -319,6 +322,38 @@ Some Built in Keybindings by Lazy Nvim
 - writeln
 - while-let
 - while
+
+</details>
+
+
+<details>
+
+<summary><strong>How to add custom snippets?</strong></summary>
+
+1. Create a file in `~/.config/nvim/snippets/rust.snippets`
+
+`mkdir -pv ~/.config/nvim/snippets && touch ~/.config/nvim/snippets/rust.snippets`
+
+2. Edit `~/.config/nvim/lua/plugins/snip.lua`
+
+```lua
+dependencies = {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require("luasnip.loaders.from_vscode").load({
+        include = { "rust" },
+        -- Uncomment paths
+        paths = {
+         "~/.config/nvim/snippets"
+        },
+      })
+    end,
+  },
+```
+
+3. Add your custom snippets in `~/.config/nvim/snippets/rust.snippets`
+
+Note: Format should be the same as vscode snippets eg. [built-in-rust-snippets](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)
 
 </details>
 
