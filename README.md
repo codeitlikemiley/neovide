@@ -207,11 +207,10 @@ Some Built in Keybindings by Lazy Nvim
 #### [For More Built in Keymaps of Lazy Nvim Check this out](https://www.lazyvim.org/keymaps)
 
 
-#### [Checkout Built in Snippets with Rust](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)
 
 
 <details>
-<summary>Rust Built in Snippets</summary>
+<summary>[Checkout Built in Snippets with Rust](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)</summary>
 
 ### A
 - allow
