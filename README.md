@@ -352,7 +352,108 @@ dependencies = {
 
 3. Add your custom snippets in `~/.config/nvim/snippets/rust.snippets`
 
-Note: Format should be the same as vscode snippets eg. [built-in-rust-snippets](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)
+Note: Format should be the same as vscode snippets eg. [built-in-rust-snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#vs-code)
+
+As a reference on the structure of these snippet libraries, see friendly-snippets.
+
+We support a small extension: snippets can contain LuaSnip-specific options in the luasnip-table:
+
+```json
+"example1": {
+	"prefix": "options",
+	"body": [
+		"whoa! :O"
+	],
+	"luasnip": {
+		"priority": 2000,
+		"autotrigger": true,
+		"wordTrig": false
+	}
+}
+```
+
+Files with the extension jsonc will be parsed as jsonc, json with comments, while *.json are parsed with a regular json parser, where comments are disallowed. (the json-parser is a bit faster, so don't default to jsonc if it's not necessary).
+
+Example:
+
+`~/.config/nvim/my_snippets/package.json`:
+
+```json
+{
+	"name": "example-snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"all"
+				],
+				"path": "./snippets/all.json"
+			},
+			{
+				"language": [
+					"lua"
+				],
+				"path": "./lua.json"
+			}
+		]
+	}
+}
+```
+
+
+`~/.config/nvim/my_snippets/snippets/all.json:`
+
+```json
+{
+	"snip1": {
+		"prefix": "all1",
+		"body": [
+			"expands? jumps? $1 $2 !"
+		]
+	},
+	"snip2": {
+		"prefix": "all2",
+		"body": [
+			"multi $1",
+			"line $2",
+			"snippet$0"
+		]
+	}
+}
+```
+
+`~/.config/nvim/my_snippets/lua.json`:
+
+```json
+{
+	"snip1": {
+		"prefix": "lua",
+		"body": [
+			"lualualua"
+		]
+	}
+}
+````
+
+This collection can be loaded with any of
+
+-- don't pass any arguments, luasnip will find the collection because it is (probably) in rtp.
+
+```lua
+require("luasnip.loaders.from_vscode").lazy_load()
+```
+
+-- specify the full path...
+
+```
+ uarequire("luasnip.loaders.from_vscode").lazy_load({paths = "~/.config/nvim/my_snippets"})
+```
+-- or relative to the directory of $MYVIMRC
+
+```lua
+require("luasnip.loaders.from_vscode").load({paths = "./my_snippets"})
+````
+Standalone
 
 </details>
 
