@@ -213,7 +213,6 @@ Some Built in Keybindings by Lazy Nvim
 
 <summary>Checkout Built-in Snippets with Rust</summary>
   <a href="https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json">Click here to view the snippets</a>
-</details>
 
 ### A
 - allow
