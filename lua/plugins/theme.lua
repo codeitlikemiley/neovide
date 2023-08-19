@@ -1,9 +1,18 @@
 return {
-    { "ellisonleao/gruvbox.nvim" },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "gruvbox",
-        },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
 }
