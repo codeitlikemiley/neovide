@@ -2,6 +2,68 @@
 
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
+# TODO
+
+- [ ] Create an Installer Script for MacOS
+
+This script would be used to quickly install all the requirements for this IDE.
+<details>
+
+<summary> Installer Script</summary>
+
+``` bash
+#!/bin/bash
+if ! command -v brew &> /dev/null
+then
+    echo "Pleas Install Brew from https://brew.sh"
+    exit
+fi
+
+if ! command -v rustup &> /dev/null
+then
+    echo "Please Install Rust from https://www.rust-lang.org/tools/install"
+    exit
+fi
+
+if ! command -v neovim &> /dev/null
+   brew install neovim
+fi
+
+# install python 2 and 3 using pyenv pyenv-virtualenv
+
+if ! command python &> /dev/null
+  brew install pyenv pyenv-virtualenv
+  pyenv install 2.7.18
+  pyenv install 3.8.5
+fi
+
+
+
+# Only works for Ubuntu 18.04+
+sudo apt install neovim
+sudo apt install python-neovim
+sudo apt install python3-neovim
+# alt:
+# pip3 install neovim pynvim
+
+rustup component add clippy
+rustup component add rustfmt
+rustup component add rust-src
+
+
+# https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
+git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+cargo xtask install --server
+cd ..
+rm -rf rust-analyzer
+```
+</details>
+
+- [ ] Need to make the script executable `chmod +x ./install_neovide_on_mac`
+
+- [ ] Run the script `./install_neovide_on_mac`
+
+
 
 <details>
 <summary>
@@ -9,6 +71,8 @@
 </summary>
 
 Must Have Installed, check the link on how to install it
+
+- [Brew](https://brew.sh)
 
 - [Rust](https://www.rust-lang.org/tools/install)
 
