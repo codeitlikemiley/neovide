@@ -89,6 +89,10 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>CMD</kbd> + <kbd>M</kbd> === `Expand Rust Macro`
 
+<kbd>CMD</kbd> + <kbd>slash</kbd> === `Comment Selected Lines on Visual / Normal Mode`
+
+<kbd>slash</kbd> + <kbd>slash</kbd> === `Comment Line`
+
 
 > Note: this is for MacOS users only
 
@@ -201,6 +205,123 @@ Some Built in Keybindings by Lazy Nvim
 </details>
 
 #### [For More Built in Keymaps of Lazy Nvim Check this out](https://www.lazyvim.org/keymaps)
+
+
+#### [Checkout Built in Snippets with Rust](https://github.com/rafamadriz/friendly-snippets/blob/main/snippets/rust/rust.json)
+
+
+<details>
+<summary>Rust Built in Snippets</summary>
+
+### A
+- allow
+- assert
+- assert_eq
+
+### B
+- bench
+
+### C
+- cfg
+- cfg_attr
+- cfg!
+- column
+- concat
+- concat_idents
+- const
+
+### D
+- deny
+- debug_assert
+- debug_assert_eq
+- derive
+
+### E
+- env
+- extern-crate
+- extern-fn
+- extern-mod
+- else
+- enum
+- Err
+
+### F
+- file
+- format
+- format_args
+- fn
+- for
+
+### I
+- include
+- include_bytes
+- include_str
+- if-let
+- if
+- impl-trait
+- impl
+- inline-fn
+
+### L
+- line
+- loop
+- let
+
+### M
+- macro_use
+- module_path
+- main
+- match
+- mod
+- mod-block
+- macro_rules
+
+### N
+- no_std
+- no_core
+
+### O
+- option_env
+- Ok
+
+### P
+- panic
+- print
+- println
+- pfn
+
+### R
+- repr
+
+### S
+- stringify
+- static
+- Some
+- struct-tuple
+- struct-unit
+- struct
+
+### T
+- thread_local
+- try
+- test
+- trait
+- type
+
+### U
+- unimplemented
+- unreachable
+
+### V
+- vec
+
+### W
+- write
+- writeln
+- while-let
+- while
+
+</details>
 
 
 #### [Solution to Known Issues with Neovide on Mac](https://github.com/neovide/neovide/discussions/1984)
