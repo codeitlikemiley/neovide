@@ -1,0 +1,13 @@
+{
+  "name": "codeitlikemiley-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "./rust/rust.json"
+      }
+    ]
+  }
+}
