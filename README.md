@@ -33,29 +33,13 @@ fi
 
 if ! command python &> /dev/null
   brew install pyenv pyenv-virtualenv
-  pyenv install 2.7.18
-  pyenv install 3.8.5
+  pyenv install python3 python2  anaconda3
+  pyenv activate conda
+  pyenv global python3 python2 anaconda3
+  python3 -m pip install pynvim
+  brew install neovim
 fi
 
-
-
-# Only works for Ubuntu 18.04+
-sudo apt install neovim
-sudo apt install python-neovim
-sudo apt install python3-neovim
-# alt:
-# pip3 install neovim pynvim
-
-rustup component add clippy
-rustup component add rustfmt
-rustup component add rust-src
-
-
-# https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
-git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
-cargo xtask install --server
-cd ..
-rm -rf rust-analyzer
 ```
 </details>
 
