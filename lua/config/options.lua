@@ -2,6 +2,8 @@ local alpha = function()
   return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
 end
 
+vim.g.rust_clip_command = "xclip -selection clipboard"
+
 if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.3
 
