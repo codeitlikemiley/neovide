@@ -2,8 +2,7 @@ local telescope_builtin = require("telescope.builtin")
 local Util = require("lazyvim.util")
 
 -- if nil cwd then get env var called NEOVIDE_CWD
-local cwd =   vim.fn.getcwd()
-
+local cwd = vim.fn.getcwd()
 
 local function find_files_on_workspace()
   telescope_builtin.find_files({ cwd = cwd })
