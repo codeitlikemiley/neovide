@@ -10,12 +10,11 @@ return {
     "rafamadriz/friendly-snippets",
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load({
-        -- remove all snippets
+        -- only load rust snippets
         include = { "rust" },
-        -- load our snippets
-        --paths = {
-        --  "~/.config/nvim/snippets",
-        --},
+        -- configure ~/.config/snippets/package.json to add other languages to load
+        -- for rust snippets add it on ~/.config/snippets/rust/rust.json
+        paths = "~/.config/nvim/snippets",
       })
     end,
   },
