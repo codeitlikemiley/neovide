@@ -12,7 +12,7 @@ return {
     },
     mappings = {
       comment = "<D-/>",
-      comment_line = "//",
+      comment_line = "<D-/>",
       textobject = "<D-/>",
     },
   },
