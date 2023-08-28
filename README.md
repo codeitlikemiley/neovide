@@ -99,6 +99,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>F5</kbd> === `Reload Workspace`
 
+<kbd>F11</kbd> === `Run Cargo Watch`
+
 <kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run Under Cursor`
 
 <kbd>CMD</kbd> + <kbd>E</kbd> === Run Test Under Cursor
@@ -195,11 +197,13 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 | <code>&lt;leader&gt;rr</code> | Rust Runnables                | **n** |
 | <code>&lt;leader&gt;rl</code> | List Test Summary             | **n** |
 | <code>&lt;leader&gt;rd</code> | Rust Debuggables              | **n** |
+| <code>&lt;leader&gt;rn</code> | Smart Cargo Run Under Cursor  | **n** |
 | <code>&lt;leader&gt;rm</code> | Rust Expand Macro             | **n** |
 | <code>&lt;leader&gt;rh</code> | Rust Disable Inlay Hints      | **n** |
 | <code>&lt;leader&gt;rH</code> | Rust Enable Inlay Hints       | **n** |
 | <code>&lt;leader&gt;ru</code> | Toggle Debug UI               | **n** |
 | <code>&lt;leader&gt;rs</code> | Rust Standalone Server        | **n** |
+| <code>&lt;leader&gt;rw</code> | Rust Cargo Watch              | **n** |
 | <code>&lt;leader&gt;rv</code> | Reload Vim Configuration      | **n** |
 | <code>&lt;leader&gt;dS</code> | Delete Swap Files             | **n** |
 
