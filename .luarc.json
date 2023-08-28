@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "run_cargo_test",
+        "get_rust_test_fn_name",
+        "jit",
+        "cargo_run"
+    ]
+}
