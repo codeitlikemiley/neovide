@@ -1,4 +1,5 @@
 local cargo_run = require("utils/cargo_run")
+local cargo_watch = require("utils/cargo_watch")
 
 function RustToggleInlayHints()
   if vim.g.rust_inlay_hints_enabled then
@@ -41,6 +42,8 @@ local custom_attach = function(_, bufnr)
   )
   vim.keymap.set("n", "<F5>", ":RustReloadWorkspace<CR>", { silent = true, desc = "Reload Rust Workspace" })
 
+  vim.keymap.set("n", "<F11>", ":lua cargo_watch()<CR>", { silent = true, desc = "Run Cargo Watch" })
+
   vim.keymap.set("n", "<leader>rt", ':lua require("neotest").run.run()<CR>', { silent = true, desc = "Cargo Test" })
   vim.keymap.set("n", "<leader>rr", ":RustRunnables<CR>", { silent = true, desc = "Rust Runnables" })
   vim.keymap.set(
@@ -49,8 +52,9 @@ local custom_attach = function(_, bufnr)
     ':lua require("neotest").summary.toggle()<CR>',
     { silent = true, desc = "Test Summary" }
   )
+
   vim.keymap.set("n", "<leader>rd", ":RustDebuggables<CR>", { silent = true, desc = "Rust Debuggables" })
-  vim.keymap.set("n", "<leader>rn", ":!cargo run<CR>", { silent = true, desc = "Cargo Run" })
+  vim.keymap.set("n", "<leader>rn", ":lua cargo_run()<CR>", { silent = true, desc = "Cargo Run" })
   vim.keymap.set("n", "<leader>rm", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
   vim.keymap.set("n", "<leader>rH", ":RustEnableInlayHints<CR>", { silent = true, desc = "Show Rust Inlay Hint" })
   vim.keymap.set("n", "<leader>rh", ":RustDisableInlayHints<CR>", { silent = true, desc = "Disable Rust Inlay Hint" })
@@ -66,5 +70,6 @@ local custom_attach = function(_, bufnr)
     ':execute "RustStartStandaloneServerForBuffer" | LspStop<CR>',
     { silent = true, desc = "Rust Standalone Server" }
   )
+  vim.keymap.set("n", "<leader>rw", ":lua cargo_watch()<CR>", { silent = true, desc = "Cargo Watch" })
 end
 return custom_attach
