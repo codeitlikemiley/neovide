@@ -99,7 +99,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>F5</kbd> === `Reload Workspace`
 
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Run App`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run Under Cursor`
 
 <kbd>CMD</kbd> + <kbd>E</kbd> === Run Test Under Cursor
 
