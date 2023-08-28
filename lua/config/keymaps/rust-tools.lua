@@ -1,3 +1,5 @@
+local cargo_run = require("utils/cargo_run")
+
 function RustToggleInlayHints()
   if vim.g.rust_inlay_hints_enabled then
     vim.cmd("RustDisableInlayHints")
@@ -13,6 +15,8 @@ vim.g.rust_inlay_hints_enabled = true
 local custom_attach = function(_, bufnr)
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 then
     -- MacOS Keymaps
+
+    vim.keymap.set("n", "<D-r>", ":lua cargo_run()<CR>", { silent = true, desc = "Smart Cargo Run Under Cursor" })
     vim.keymap.set("n", "<D-i>", ":lua RustToggleInlayHints()<CR>", { silent = true, desc = "Rust Toggle Inlay Hints" })
     vim.keymap.set("n", "<D-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
   elseif
@@ -20,7 +24,7 @@ local custom_attach = function(_, bufnr)
     or vim.fn.has("win32") and vim.fn.exists("neovide") == 1
   then
     -- Windows and Linux Keymaps
-    vim.keymap.set("n", "<M-r>", ":RustRun<CR>", { silent = true, desc = "Rust Run App" })
+    vim.keymap.set("n", "<M-r>", ":lua cargo_run()<CR>", { silent = true, desc = "Rust Run App" })
     vim.keymap.set("n", "<M-i>", ":RustToggleInlayHints<CR>", { silent = true, desc = "Rust Toggle Inlay Hints" })
     vim.keymap.set("n", "<M-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
   end
