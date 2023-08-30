@@ -9,26 +9,26 @@ return {
       if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
         vim.keymap.set(
           "n",
-          "<D-e>",
+          "<D-t>",
           ':lua require("neotest").run.run()<CR>',
           { silent = true, desc = "Run Test on Cursor" }
         )
         vim.keymap.set(
           "n",
-          "<D-t>",
+          "<D-x>",
           ':lua require("neotest").run.run({strategy = "dap"})<CR>',
           { silent = true, desc = "Debug Test on Cursor" }
         )
       else
         vim.keymap.set(
           "n",
-          "<M-e>",
+          "<M-t>",
           ':lua require("neotest").run.run()<CR>',
           { silent = true, desc = "Run Test on Cursor" }
         )
         vim.keymap.set(
           "n",
-          "<M-t>",
+          "<M-z>",
           ':lua require("neotest").run.run({strategy = "dap"})<CR>',
           { silent = true, desc = "Debug Test on Cursor" }
         )
