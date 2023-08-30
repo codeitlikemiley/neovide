@@ -4,7 +4,6 @@ return {
   keys = function()
     -- Mac Specific Keymaps
     if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
-      vim.keymap.set("n", "<D-x>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
       vim.keymap.set("n", "<D-F1>", ":DapStepOver<CR>", { silent = true, desc = "Step Over" })
       vim.keymap.set("n", "<D-F2>", ":DapStepInto<CR>", { silent = true, desc = "Step Into" })
       vim.keymap.set("n", "<D-F3>", ":DapStepOut<CR>", { silent = true, desc = "Step Out" })
@@ -18,7 +17,6 @@ return {
         and vim.fn.exists("neovide") == 1
         and vim.fn.has("gui_running")
     then
-      vim.keymap.set("n", "<M-x>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
       vim.keymap.set("n", "<M-F1>", ":DapStepOver<CR>", { silent = true, desc = "Step Over" })
       vim.keymap.set("n", "<M-F2>", ":DapStepInto()<CR>", { silent = true, desc = "Step Into" })
       vim.keymap.set("n", "<M-F3>", ":DapStepOut<CR>", { silent = true, desc = "Step Out" })
@@ -26,6 +24,7 @@ return {
       vim.keymap.set("n", "<M-F5>", ":DapTerminate<CR>", { silent = true, desc = "Dap End" })
     end
     -- Universal Keymaps
+    vim.keymap.set("n", "<M-x>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
     vim.keymap.set(
       "n",
       "<D-`>",
