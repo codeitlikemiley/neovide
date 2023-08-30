@@ -295,5 +295,25 @@
       "\tprintln!(\"Handle Error\");",
       "}"
     ]
+  },
+  "impl_deref": {
+    "prefix": "impl_deref",
+    "body": [
+      "use std::ops::{Deref, DerefMut};",
+      "",
+      "impl<${1:T}> Deref for ${2:YourConcreteStruct}<${1:T}> {",
+      "    type Target = ${1:T};",
+      "    fn deref(&self) -> &Self::Target {",
+      "        &self.${3:your_field}",
+      "    }",
+      "}",
+      "",
+      "impl<${1:T}> DerefMut for ${2:YourConcreteStruct}<${1:T}> {",
+      "    fn deref_mut(&mut self) -> &mut Self::Target {",
+      "        &mut self.${3:your_field}",
+      "    }",
+      "}"
+    ],
+    "description": "Impl Deref and DerefMut traits for a custom type"
   }
 }
