@@ -284,5 +284,16 @@
       "}"
     ],
     "description": "Create a Rust struct with Serialize, Deserialize, Clone, and Debug traits"
+  },
+  "Try Borrow Mut on Struct Method": {
+    "prefix": "tbm",
+    "description": "Mutable borrow check",
+    "body": [
+      "if let Ok(mut ${1:field}) = self.${1:field}.try_borrow_mut() {",
+      "\t*${1:field} = ${2:newVal};",
+      "} else {",
+      "\tprintln!(\"Handle Error\");",
+      "}"
+    ]
   }
 }
