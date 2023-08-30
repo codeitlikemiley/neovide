@@ -87,7 +87,7 @@ Must Have Installed, check the link on how to install it
 
 <kbd>SHIFT</kbd>+<kbd>SPACE</kbd> === `List and Search All Keymaps`
 
-Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
+Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> for different keymaps it is listed below
 
 ### <strong>Testing:</strong>
 
@@ -101,17 +101,34 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 <kbd>F11</kbd> === `Run Cargo Watch`
 
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run Under Cursor`
 
-<kbd>CMD</kbd> + <kbd>E</kbd> === Run Test Under Cursor
+-- Mac Only
 
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Run (mac)`
+
+<kbd>OPT</kbd> + <kbd>R</kbd> === `Cargo Run Under Cursor (mac)`
+
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Run Test Under Cursor (mac)`
+
+<kbd>CMD</kbd> + <kbd>X</kbd> === `Debug Test Under Cursor (mac)`
+
+
+-- Windows/Linux Only
+
+<kbd>OPT</kbd> + <kbd>R</kbd> === `Rust Run (windows/linux)`
+
+<kbd>OPT</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd> === `Cargo Run Under Cursor (windows/linux)`
+
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Run Test Under Cursor (windows/linux)`
+
+<kbd>OPT</kbd> + <kbd>Z</kbd> === `Debug Test Under Cursor (windows/linux)`
+
 
 ### <strong>Debugging:</strong>
 
 <kbd>CMD</kbd> + `backtick` === `Toggle Debugger UI`
 
-<kbd>CMD</kbd> + <kbd>X</kbd> === `Toggle Breakpoint``
+
 
 <kbd>CMD</kbd> + <kbd>F1</kbd> === `Step Over`
 
@@ -122,6 +139,12 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 <kbd>CMD</kbd> + <kbd>F4</kbd> === `Continue`
 
 <kbd>CMD</kbd> + <kbd>i</kbd> === `Rust Toggle Inlay Hints`
+
+-- Mac Only
+<kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint (mac)`
+
+-- Windows/Linux Only
+<kbd>OPT</kbd> + <kbd>X</kbd> === `Toggle Breakpoint (windows/linux)`
 
 ### <strong>File Editing</strong>
 
@@ -162,9 +185,9 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd>
 
 ## <strong>Telescope</strong>
 
-<kbd>CMD</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
-
 <kbd>OPT</kbd> + <kbd>D</kbd> === `Document Diagnostics`
+
+<kbd>OPT</kbd> +<kbd>SHIFT</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
 
 <kbd>CMD</kbd> + <kbd>F</kbd> === `Find Everything on Workspace`
 
