@@ -6,12 +6,12 @@
 <details>
   <summary>Installation on Macos and Linux</summary>
 
-<code>
+```sh
 git clone https://github.com/codeitlikemiley/nvim
 mv nvim ~/.config
 cd nvim ~/.config/nvim
 chmod +x ./install.sh
-</code>
+```
 
 </details>
 
