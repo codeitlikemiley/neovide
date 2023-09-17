@@ -2,56 +2,22 @@
 
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
-# TODO
 
-- [ ] Create an Installer Script for MacOS
-
-This script would be used to quickly install all the requirements for this IDE.
 <details>
-
-<summary> Installer Script</summary>
-
-``` bash
-#!/bin/bash
-if ! command -v brew &> /dev/null
-then
-    echo "Pleas Install Brew from https://brew.sh"
-    exit
-fi
-
-if ! command -v rustup &> /dev/null
-then
-    echo "Please Install Rust from https://www.rust-lang.org/tools/install"
-    exit
-fi
-
-if ! command -v neovim &> /dev/null
-   brew install neovim
-fi
-
-# install python 2 and 3 using pyenv pyenv-virtualenv
-
-if ! command python &> /dev/null
-  brew install pyenv pyenv-virtualenv
-  pyenv install python3 python2  anaconda3
-  pyenv activate conda
-  pyenv global python3 python2 anaconda3
-  python3 -m pip install pynvim
-  brew install neovim
-fi
-
-```
+  <summary>Installation on Macos and Linux</summary>
+<code>
+git clone https://github.com/codeitlikemiley/nvim
+mv nvim ~/.config
+cd nvim ~/.config/nvim
+chmod +x ./install.sh
+</code>
 </details>
 
-- [ ] Need to make the script executable `chmod +x ./install_neovide_on_mac`
-
-- [ ] Run the script `./install_neovide_on_mac`
-
-
+> Please Check `./install.sh` before running it , especially if your on linux , your package manager might not be supported by the script
 
 <details>
 <summary>
-<strong> Requirements  <strong>
+<strong> Requirements<strong>
 </summary>
 
 Must Have Installed, check the link on how to install it
@@ -62,15 +28,15 @@ Must Have Installed, check the link on how to install it
 
 - [Neovim](https://neovim.io)
 
-- [Nerd Font](https://www.nerdfonts.com)
+- [Nerd Font](https://www.nerdfonts.com) Optional
 
 - [Neovide](https://neovide.dev)
 
 - [Cargo Nexttest](https://nexte.st)
 
-- [Lazy Git](https://github.com/jesseduffield/lazygit#installation)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) and [Lazy Git](https://github.com/jesseduffield/lazygit#installation)
 
-> Note if you have existing neovim set up [check this out](https://www.lazyvim.org/installation)
+> Warning: if you have existing neovim set up [check this out](https://www.lazyvim.org/installation)
 
 </details>
 
