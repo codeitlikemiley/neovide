@@ -8,3 +8,4 @@ foo.*
 data
 autoload/*
 plugged/*
+lazy-lock.json
