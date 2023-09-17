@@ -137,9 +137,10 @@
       "    type Item = ${2:ItemType};",
       "",
       "    fn next(&mut self) -> Option<Self::Item> {",
-      "        // Your logic here",
-      "        // return Some(item);",
-      "        // return None;",
+      "        match self.items.len() {",
+      "            n if n > 0 => Some(self.items.remove(0)),",
+      "            _ => None,",
+      "        }",
       "    }",
       "}"
     ],
@@ -315,5 +316,100 @@
       "}"
     ],
     "description": "Impl Deref and DerefMut traits for a custom type"
+  },
+  "unwrap_or_else": {
+    "prefix": "unwrap_or_else",
+    "body": [
+      "let ${1:value} = ${2:method_name}(${3:params}).unwrap_or_else(|e| {",
+      "    eprintln!(\"An error occurred: {}\", e);",
+      "    ${4:default_struct}",
+      "});"
+    ],
+    "description": "Unwrap a Result or handle the error and provide a default value"
+  },
+  "Read File Line-by-Line": {
+    "prefix": "read_file_lines",
+    "body": [
+      "use std::{",
+      "    error::Error,",
+      "    fs::File,",
+      "    io::{BufRead, BufReader, Error as IOError},",
+      "};",
+      "",
+      "fn read_file(filename: &str) -> Result<(), IOError> {",
+      "    let file = File::open(filename)?;",
+      "    let reader = BufReader::new(file);",
+      "",
+      "    for (index, line) in reader.lines().enumerate() {",
+      "        match line {",
+      "            Ok(content) => println!(\"Line {}: {}\", index + 1, content),",
+      "            Err(_) => println!(\"Line {}:\", index + 1),",
+      "        }",
+      "    }",
+      "    Ok(())",
+      "}"
+    ],
+    "description": "Snippet for the read_file function to read a file line-by-line in Rust with specified imports and function."
+  },
+  "ImplFromTraitForErrorConversion": {
+    "prefix": "impl_from",
+    "body": [
+      "impl From<${1:T}> for ${2:StructOrEnum} {",
+      "    fn from(${3:value}: $1) -> Self {",
+      "        $3.into()",
+      "    }",
+      "}"
+    ],
+    "description": "Implement the From trait for error conversion"
+  },
+  "Impl Error": {
+    "prefix": "impl_error",
+    "body": [
+      "impl Error for ${1:StructOrEnum} {",
+      "    fn source(&self) -> Option<&(dyn Error + 'static)> {",
+      "        self.source.as_deref()",
+      "    }",
+      "}"
+    ],
+    "description": "Implement Error trait for MonthError"
+  },
+  "Implement IntoIterator": {
+    "prefix": "impl_into_iter",
+    "body": [
+      "impl IntoIterator for ${1:Struct} {",
+      "    type Item = ${2:String};",
+      "    type IntoIter = ${3:std::vec::IntoIter<Self::Item>};",
+      "    ",
+      "    fn into_iter(self) -> Self::IntoIter {",
+      "        vec![",
+      "            ${4}",
+      "        ].into_iter()",
+      "    }",
+      "}"
+    ],
+    "description": "Implements the IntoIterator trait for a struct with lifetimes"
+  },
+  "Iced Imports": {
+    "prefix": "iced_widgets",
+    "body": [
+      "use iced::widget::{",
+      "    button, canvas, checkbox, column, combo_box, container,",
+      "    horizontal_rule, horizontal_space, image, pick_list,",
+      "    progress_bar, radio, row, scrollable, slider, svg,",
+      "    text, text_input, toggler, tooltip, vertical_rule,",
+      "    vertical_slider,",
+      "};"
+    ],
+    "description": "Snippet for Iced framework widget imports in Rust"
+  },
+  "Iced Font Import": {
+    "prefix": "iced_font",
+    "body": [
+      "use iced::{",
+      "    font::{Family, Stretch, Weight},",
+      "    Font,",
+      "};"
+    ],
+    "description": "Import statements for Iced font"
   }
 }
