@@ -59,6 +59,7 @@ local custom_attach = function(_, bufnr)
   vim.keymap.set("n", "<leader>rm", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
   vim.keymap.set("n", "<leader>rH", ":RustEnableInlayHints<CR>", { silent = true, desc = "Show Rust Inlay Hint" })
   vim.keymap.set("n", "<leader>rh", ":RustDisableInlayHints<CR>", { silent = true, desc = "Disable Rust Inlay Hint" })
+  vim.keymap.set("n", "<leader>rf", ":!dx fmt<CR>", { silent = true, desc = "run Dioxus FMT" })
   vim.keymap.set(
     "n",
     "<leader>ru",
