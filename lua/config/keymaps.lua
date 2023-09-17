@@ -16,6 +16,7 @@ require("config/keymaps/unredo") -- [CMD] + z and [CMD] +y
 require("config/keymaps/save") -- [CMD] + s to save
 require("config/keymaps/reload") -- [shift] + f5 to reload
 require("config/keymaps/movelines") -- [OPT] + j and [OPT] + k to move lines up and down
+require("config/keymaps/select_all") -- [OPT] + a to select all
 
 -- manage buffers
 require("config/keymaps/smartquit") -- [qq] to smart quit
