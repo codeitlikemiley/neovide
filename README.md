@@ -5,12 +5,14 @@
 
 <details>
   <summary>Installation on Macos and Linux</summary>
+
 <code>
 git clone https://github.com/codeitlikemiley/nvim
 mv nvim ~/.config
 cd nvim ~/.config/nvim
 chmod +x ./install.sh
 </code>
+
 </details>
 
 > Please Check `./install.sh` before running it , especially if your on linux , your package manager might not be supported by the script
