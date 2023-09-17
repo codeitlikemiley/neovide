@@ -36,11 +36,13 @@ Must Have Installed, check the link on how to install it
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) and [Lazy Git](https://github.com/jesseduffield/lazygit#installation)
 
-> Warning: if you have existing neovim set up [check this out](https://www.lazyvim.org/installation)
-
 </details>
 
+> Warning: if you have existing neovim set up [check this out](https://www.lazyvim.org/installation)
+
 <br>
+
+> Note: if you forget keybindings just press SHIFT + SPACE
 
 <details>
 <summary>
