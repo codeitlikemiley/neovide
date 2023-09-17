@@ -1,6 +1,6 @@
 function cargo_watch()
   -- Construct the cargo watch command
-  local cmd = "cargo watch -x run"
+  local cmd = "cargo watch -c"
 
   -- open new horizontal split
   vim.cmd(":new")
