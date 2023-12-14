@@ -411,5 +411,17 @@
       "};"
     ],
     "description": "Import statements for Iced font"
+  },
+  "Rust Script": {
+    "scope": "rust",
+    "prefix": "rsz",
+    "body": [
+      "#!/usr/bin/env -S cargo +nightly -q -Zscript",
+      "",
+      "fn main() {",
+      "    ${1:println!(\"Do Something\");}",
+      "}"
+    ],
+    "description": "Rust Script Template"
   }
 }
