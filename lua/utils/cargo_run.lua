@@ -1,6 +1,6 @@
 function cargo_run()
   -- Get local current working directory
-  local cwd = vim.fn.getenv("NEOVIDE_CWD") or vim.fn.getcwd()
+  local cwd = vim.fn.getcwd()
   local folder_name = vim.fn.fnamemodify(cwd, ":t")
 
   -- Get the file name without extension to be used in --bin

@@ -2,7 +2,7 @@ local get_rust_test_fn_name = require("utils/get_rust_test_fn_name")
 
 function run_cargo_test()
   -- get local current working directory
-  local cwd = vim.fn.getenv("NEOVIDE_CWD") or vim.fn.getcwd()
+  local cwd = vim.fn.getcwd()
   local folder_name = cwd:match("^.+/(.+)$")
   -- Get the current line where the cursor is placed
 
