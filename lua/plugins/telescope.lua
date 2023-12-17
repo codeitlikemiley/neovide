@@ -1,6 +1,6 @@
 local telescope_builtin = require("telescope.builtin")
 local Util = require("lazyvim.util")
-
+local cargo_bin = require("utils/cargo_bin")
 -- if nil cwd then get env var called NEOVIDE_CWD
 local cwd = vim.fn.getcwd()
 
@@ -50,6 +50,6 @@ return {
     { "<M-p>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
     { "<D-e>", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)", mode = { "n", "v", "i" } },
     { "<S-space>", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-    { "<D-w>", "<cmd>Telescope buffers<cr>", desc = "Open Files on Current Working Directory" },
+    { "<D-w>",  cargo_bin, desc = "Run All your Installed Cargo Commands" },
   },
 }
