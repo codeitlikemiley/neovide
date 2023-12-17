@@ -18,12 +18,15 @@ local custom_attach = function(_, bufnr)
     -- MacOS Keymaps
     vim.keymap.set("n", "<D-i>", ":lua RustToggleInlayHints()<CR>", { silent = true, desc = "Rust Toggle Inlay Hints" })
     vim.keymap.set("n", "<D-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
+    vim.keymap.set("n", "<D-y>", ":RustParentModule<CR>", { silent = true, desc = "Rust Parent Module" })
   elseif
     vim.fn.has("unix") == 1 and vim.fn.exists("neovide") == 1
     or vim.fn.has("win32") and vim.fn.exists("neovide") == 1
   then
     -- Windows and Linux Keymaps
     vim.keymap.set("n", "<M-r>", cargo_run, { silent = true, desc = "Rust Run App" })
+    vim.keymap.set("n", "<M-w>", cargo_bin, { silent = true, desc = "Run All your Installed Cargo Commands" })
+    vim.keymap.set("n", "<M-y>", ":RustParentModule<CR>", { silent = true, desc = "Rust Parent Module" })
     vim.keymap.set("n", "<M-i>", ":RustToggleInlayHints<CR>", { silent = true, desc = "Rust Toggle Inlay Hints" })
     vim.keymap.set("n", "<M-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
   end
