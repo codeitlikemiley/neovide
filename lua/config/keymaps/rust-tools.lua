@@ -1,5 +1,4 @@
 local cargo_run = require("utils/cargo_run")
-local cargo_watch = require("utils/cargo_watch")
 local cargo_bin = require("utils/cargo_bin")
 
 function RustToggleInlayHints()
@@ -41,7 +40,6 @@ local custom_attach = function(_, bufnr)
   )
   vim.keymap.set("n", "<F5>", ":RustReloadWorkspace<CR>", { silent = true, desc = "Reload Rust Workspace" })
 
-  vim.keymap.set("n", "<F11>", cargo_watch, { silent = true, desc = "Run Cargo Watch" })
 
   vim.keymap.set("n", "<leader>rt", ':lua require("neotest").run.run()<CR>', { silent = true, desc = "Cargo Test" })
   vim.keymap.set("n", "<leader>rr", ":RustRunnables<CR>", { silent = true, desc = "Rust Runnables" })
@@ -71,6 +69,5 @@ local custom_attach = function(_, bufnr)
     ':execute "RustStartStandaloneServerForBuffer" | LspStop<CR>',
     { silent = true, desc = "Rust Standalone Server" }
   )
-  vim.keymap.set("n", "<leader>rw", cargo_watch, { silent = true, desc = "Cargo Watch" })
 end
 return custom_attach
