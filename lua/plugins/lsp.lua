@@ -11,12 +11,11 @@ return -- LSP keymaps
         { "<D-.>", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v", "i" }, has = "codeAction" }
       -- disable default keymap of CMD + r
       keys[#keys + 1] = { "<D-r>", false }
-      keys[#keys +1] = { "<D-r>", cargo_run , desc = "Rename", mode = { "n", "v", "i" }, has = "Cargo Run Under Cursor" }
+      keys[#keys +1] = { "<D-r>", cargo_run , desc = "Cargo Run Under Cursor", mode = { "n", "v", "i" }, has = "Cargo Run Under Cursor" }
       keys[#keys + 1] = { "<F2>", vim.lsp.buf.rename, desc = "Rename", mode = { "n", "v", "i" }, has = "rename" }
     else
       keys[#keys + 1] =
         { "<C-.>", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v", "i" }, has = "codeAction" }
-
       keys[#keys + 1] = { "<F2>", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
     end
 
