@@ -74,13 +74,16 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 -- Mac Only
 
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Run (mac)`
-
-<kbd>OPT</kbd> + <kbd>R</kbd> === `Cargo Run Under Cursor (mac)`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Cargo Run under cursor (mac)`
 
 <kbd>CMD</kbd> + <kbd>T</kbd> === `Run Test Under Cursor (mac)`
 
 <kbd>CMD</kbd> + <kbd>X</kbd> === `Debug Test Under Cursor (mac)`
+
+<kbd>CMD</kbd> + <kbd>W</kbd> === `Cargo Bin Runner (mac)`
+
+
+> This would list all commands in your `.cargo/bin` , and you can `pick` and `run` commands
 
 
 -- Windows/Linux Only
@@ -153,6 +156,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>B</kbd> === `Toggle Sidebar`
 
+<kbd>CMD</kbd> + <kbd>Y</kbd> === `RustParentModule`
+
 ## <strong>Telescope</strong>
 
 <kbd>OPT</kbd> + <kbd>D</kbd> === `Document Diagnostics`
@@ -173,8 +178,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
-<kbd>CMD</kbd> + <kbd>W</kbd> === `Find Open Buffers`
-
 <kbd>CTRL</kbd> + <kbd>R</kbd> === `Recent Files`
 
 <kbd>OPT</kbd> + <kbd>R</kbd> === `Recent (CWD)`
@@ -187,6 +190,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 | Key                           | Description                   | Mode  |
 |-------------------------------|-------------------------------|-------|
 | <code>&lt;leader&gt;rt</code> | Run Test Under Cursor         | **n** |
+| <code>&lt;leader&gt;rb</code> | Run All Cargo Bin Commands    | **n** |
 | <code>&lt;leader&gt;rr</code> | Rust Runnables                | **n** |
 | <code>&lt;leader&gt;rl</code> | List Test Summary             | **n** |
 | <code>&lt;leader&gt;rd</code> | Rust Debuggables              | **n** |
