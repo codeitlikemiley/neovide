@@ -21,7 +21,7 @@ return {
         on_attach = on_attach,
         -- standalone file support
         -- setting it to false may improve startup time
-        standalone = true,
+        standalone = false,
       },
       dap = {
         adapter = adapter,
