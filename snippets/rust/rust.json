@@ -12,19 +12,6 @@
     ],
     "description": "Implement the Debug trait for a type with a single field in Rust"
   },
-  "impl_display_single_field": {
-    "prefix": "impl_display",
-    "body": [
-      "use std::fmt;",
-      "",
-      "impl fmt::Display for ${1:YourType} {",
-      "    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {",
-      "        write!(f, \"{}\", self.${2:field1})",
-      "    }",
-      "}"
-    ],
-    "description": "Implement the Display trait for a type with a single field in Rust"
-  },
   "impl_partialord_single_field": {
     "prefix": "impl_partialord",
     "body": [
@@ -413,7 +400,6 @@
     "description": "Import statements for Iced font"
   },
   "Rust Script": {
-    "scope": "rust",
     "prefix": "rsz",
     "body": [
       "#!/usr/bin/env -S cargo +nightly -q -Zscript",
