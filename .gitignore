@@ -10,3 +10,4 @@ autoload/*
 plugged/*
 lazy-lock.json
 lazyvim.json
+*.bak
