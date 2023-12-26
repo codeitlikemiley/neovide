@@ -33,7 +33,6 @@ return {
             },
             -- macro expansion configuration
             procMacro = {
-              enable = true,
               ignored = {
                 leptos_macro = {
                   -- optional: --
