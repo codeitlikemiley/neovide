@@ -12,7 +12,7 @@ return {
       local extension_path = codelldb:get_install_path() .. "/extension/"
       local codelldb_path = extension_path .. "adapter/codelldb"
       local liblldb_path = vim.fn.has("mac") == 1 and extension_path .. "lldb/lib/liblldb.dylib"
-        or extension_path .. "lldb/lib/liblldb.so"
+          or extension_path .. "lldb/lib/liblldb.so"
       adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
     end
     return {
@@ -22,22 +22,46 @@ return {
         -- standalone file support
         -- setting it to false may improve startup time
         standalone = false,
+        -- rust-analyzer settings
+        settings = {
+          -- to enable rust-analyzer settings visit:
+          -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+          ["rust-analyzer"] = {
+            -- enable clippy on save
+            checkOnSave = {
+              command = "clippy",
+            },
+            -- macro expansion configuration
+            procMacro = {
+              enable = true,
+              ignored = {
+                leptos_macro = {
+                  -- optional: --
+                  -- "component",
+                  "server",
+                },
+              },
+            },
+          },
+        },
       },
       dap = {
         adapter = adapter,
       },
       tools = {
+        reload_workspace_from_cargo_toml = true,
         on_initialized = function()
           vim.cmd([[
-                augroup RustLSP
-                  autocmd CursorHold                      *.rs silent! lua vim.lsp.buf.document_highlight()
-                  autocmd CursorMoved,InsertEnter         *.rs silent! lua vim.lsp.buf.clear_references()
-                  autocmd BufEnter,CursorHold,InsertLeave *.rs silent! lua vim.lsp.codelens.refresh()
-                augroup END
-              ]])
+                 augroup RustLSP
+                   autocmd CursorHold                      *.rs silent! lua vim.lsp.buf.document_highlight()
+                   autocmd CursorMoved,InsertEnter         *.rs silent! lua vim.lsp.buf.clear_references()
+                   autocmd BufEnter,CursorHold,InsertLeave *.rs silent! lua vim.lsp.codelens.refresh()
+                 augroup END
+               ]])
         end,
       },
     }
   end,
-  config = function() end,
+  config = function()
+  end,
 }
