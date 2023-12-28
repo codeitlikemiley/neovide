@@ -2,6 +2,8 @@
 
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
+# HELP (Improving Workflow on Windows / Linux)
+at the moment , im kinda busy to update the keymaps on Windows and Linux. Feel Free to Make a Pull Request.
 
 <details>
   <summary>Installation on Macos and Linux</summary>
