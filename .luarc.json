@@ -11,6 +11,7 @@
         "check_crate_type",
         "is_file_in_test_context",
         "is_makefile_valid",
-        "get_bin"
+        "get_bin",
+        "load_all_dap_configurations"
     ]
 }
