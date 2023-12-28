@@ -81,6 +81,47 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
 
+<kbd>CMD</kbd> + <kbd>K</kbd> === `Debug Continue (mac)`
+
+> If you have created `.dap_config` folder with `rust.lua` inside it would load that **dap configuration**
+
+<details>
+<summary>
+ <strong> Example Dap Configuration for Rust </strong>
+</summary>
+
+```rust
+local function get_configurations()
+    return {
+        {
+            type = 'codelldb',
+            request = 'launch',
+            name = "Debug executable 'server'",
+            cargo = {
+                args = {
+                    "build",
+                    "--bin=server",
+                    "--package=server"
+                },
+                filter = {
+                    name = "server",
+                    kind = "bin"
+                }
+            },
+            args = {},
+            cwd = '${workspaceFolder}',
+            program = function()
+                return vim.fn.getcwd() .. '/target/debug/server'
+            end,
+        },
+        -- Add other configurations here...
+    }
+end
+
+return get_configurations
+```
+</details>
+
 <kbd>OPT</kbd> + <kbd>r</kbd> === `Cargo Bin Runner (mac)`
 
 
