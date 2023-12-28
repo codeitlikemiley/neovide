@@ -1,3 +1,5 @@
+local load_all_dap_configurations = require("utils.load_dap_configurations")
+
 return {
   "mfussenegger/nvim-dap",
   -- Note press <leader> d  , is used for debugging in dap , so no need to map it here
@@ -12,8 +14,8 @@ return {
       vim.keymap.set("n", "<F8>", ":DapTerminate<CR>", { silent = true, desc = "Debug End" })
       -- Windows / Linux Specific Keymaps
     elseif
-      vim.fn.has("unix") == 1 and vim.fn.exists("neovide")
-      or vim.fn.has("win32")
+        vim.fn.has("unix") == 1 and vim.fn.exists("neovide")
+        or vim.fn.has("win32")
         and vim.fn.has("gui_running") == 1
         and vim.fn.exists("neovide") == 1
         and vim.fn.has("gui_running")
@@ -32,5 +34,8 @@ return {
       ":lua require('dapui').toggle(); vim.cmd('Neotree action=close')<CR>",
       { noremap = true, silent = true }
     )
+  end,
+  init = function(_, opts)
+    load_all_dap_configurations()
   end,
 }
