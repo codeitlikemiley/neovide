@@ -2,8 +2,10 @@
 
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
-# HELP (Improving Workflow on Windows / Linux)
-at the moment , im kinda busy to update the keymaps on Windows and Linux. Feel Free to Make a Pull Request.
+
+**NOTE**: Only MacOS Keymaps Are Well Documented on this README.md , I have remove all examples for windows/linux.
+
+**NOTE**: At the moment , only MacOS have been tested and perfected for the workflow. You can Fork and Submit Pull Request If you wanted your Contribution to be added on Main Branch.
 
 <details>
   <summary>Installation on Macos and Linux</summary>
@@ -26,7 +28,8 @@ chmod +x ./install.sh
 
 Must Have Installed, check the link on how to install it
 
-- [Brew](https://brew.sh)
+- [Brew](https://brew.sh) , Package Managers on Linux Distributions , [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/)
+
 
 - [Rust](https://www.rust-lang.org/tools/install)
 
@@ -39,6 +42,7 @@ Must Have Installed, check the link on how to install it
 - [Cargo Nexttest](https://nexte.st)
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line) and [Lazy Git](https://github.com/jesseduffield/lazygit#installation)
+
 
 </details>
 
@@ -83,15 +87,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 > This would list all commands in your `.cargo/bin` , and you can `pick` and `run` commands
 
 
--- Windows/Linux Only
-
-<kbd>OPT</kbd> + <kbd>R</kbd> === `Rust Run (windows/linux)`
-
-<kbd>OPT</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd> === `Cargo Run Under Cursor (windows/linux)`
-
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Run Test Under Cursor (windows/linux)`
-
-<kbd>OPT</kbd> + <kbd>Z</kbd> === `Debug Test Under Cursor (windows/linux)`
 
 
 ### <strong>Debugging:</strong>
@@ -114,9 +109,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 -- Mac Only
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint (mac)`
-
--- Windows/Linux Only
-<kbd>OPT</kbd> + <kbd>X</kbd> === `Toggle Breakpoint (windows/linux)`
 
 ### <strong>File Editing</strong>
 
