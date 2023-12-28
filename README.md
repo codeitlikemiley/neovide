@@ -77,7 +77,42 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 -- Mac Only
 
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Cargo Run / Test under cursor (mac)`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run and Test`
+
+**Note** : This can Run any valid `bin` and any rust `package` and `build.rs` , if you need more flexibility you can create a `Makefile` and define a custom `run` and `build` workflow. You can placed your `Makefile` beside your `Cargo.toml` or if you wanna customized a `bin`  how it runs e.g. that `bin` is located inside a folder , you can place the `Makefile` on that same folder.
+
+<details>
+<summary>
+ <strong> Example Makefile for Running Cargo Leptos</strong>
+</summary>
+
+```makefile
+# Makefile for a Rust project using cargo-leptos and cargo-nextest
+
+# Default target
+.PHONY: all
+all: build
+
+# Build target
+.PHONY: build
+build:
+	cargo leptos build
+
+.PHONY: run
+run:
+	cargo leptos watch
+
+# Test target
+.PHONY: test
+test:
+	cargo nextest run
+
+# Clean up
+.PHONY: clean
+clean:
+	cargo clean
+```
+</details>
 
 <kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
 
