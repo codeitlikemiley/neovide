@@ -52,7 +52,7 @@ Must Have Installed, check the link on how to install it
 
 > Note: if you forget keybindings just press SHIFT + SPACE
 
-#### Override Cargo Run/Test with Makefile
+### Override Cargo Run/Test with Makefile
 
 > Any Commands that extends Cargo e.g. `cargo-watch` , `cargo-leptos` or `dioxus-cli` can be forced to be used instead of `cargo run` or `cargo test` commands using a `Makefile`
 
@@ -89,7 +89,7 @@ clean:
 ```
 </details>
 
-#### Defining Debugger Configurations
+### Defining Debugger Configurations
 
 > The DAP Configuration can be added on Root Folder of your project with a name `.dap_config` , you can place any `.lua` file here but it is important to remember the `Naming Convention` if you wanna add configuration for rust then name the file `rust.lua`
 
@@ -132,6 +132,10 @@ return get_configurations
 ```
 </details>
 
+### Run Any Cargo Commands
+
+You can do it by pressing <kbd>OPT</kbd>+ <kbd>R</kbd> , if would invoke the `cargo_bin` function and show all the Installed cargo commands available on your `~/.cargo/bin` directory , you can type any cargo commands and Run it.
+
 <details>
 <summary>
  <strong> Ultimate Productivity Keybindings </strong>
@@ -157,11 +161,11 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run and Test`
 
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
+<kbd>CMD</kbd> + <kbd>D</kbd> === `Debug Test Under Cursor (mac)`
 
 <kbd>CMD</kbd> + <kbd>K</kbd> === `Debug Continue (mac)`
 
-<kbd>OPT</kbd> + <kbd>r</kbd> === `Cargo Bin Runner (mac)`
+<kbd>OPT</kbd> + <kbd>R</kbd> === `Cargo Bin Runner (mac)`
 
 
 > This would list all commands in your `.cargo/bin` , and you can `pick` and `run` commands
@@ -188,7 +192,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 <kbd>CMD</kbd> + <kbd>I</kbd> === `Rust Toggle Inlay Hints`
 
 -- Mac Only
-<kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint (mac)`
+<kbd>CMD</kbd> + <kbd>B</kbd> === `Toggle Breakpoint (mac)`
 
 ### <strong>File Editing</strong>
 
@@ -235,13 +239,9 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>F5</kbd> === `Reload VimRC`
 
-<kbd>CMD</kbd> + <kbd>Y</kbd> === `RustParentModule`
-
 ## <strong>Telescope</strong>
 
-<kbd>OPT</kbd> + <kbd>D</kbd> === `Document Diagnostics`
-
-<kbd>OPT</kbd> +<kbd>SHIFT</kbd> + <kbd>D</kbd> === `Workspace Diagnostics`
+<kbd>OPT</kbd> + <kbd>D</kbd> === `Diff View File History`
 
 <kbd>CMD</kbd> + <kbd>F</kbd> === `Find Everything on Workspace`
 
@@ -250,6 +250,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 <kbd>OPT</kbd> + <kbd>D</kbd> === `Diff File History`
 
 <kbd>CMD</kbd> + <kbd>O</kbd> === `Go to Symbols on Current Open File`
+
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Go to Workspace Symbols`
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
