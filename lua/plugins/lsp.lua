@@ -55,6 +55,7 @@ return -- LSP keymaps
     setup = {
       rust_analyzer = function(_, opts)
         local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
+        ---     @diagnostic disable-next-line: undefined-field
         require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
         return true
       end,
@@ -77,7 +78,8 @@ return -- LSP keymaps
         "Cargo Run Under Cursor"
       }
       keys[#keys + 1] = { "<F2>", vim.lsp.buf.rename, desc = "Rename", mode = { "n", "v", "i" }, has = "rename" }
-      keys[#keys + 1] = { "<D-k>", ":DapContinue<CR>", desc = "Debug Continue", mode = { "n", "v", "i" }, has = "Debug Continue" }
+      keys[#keys + 1] = { "<D-k>", ':lua require("dap").continue()<CR>', desc = "Debug Continue", mode = { "n", "v", "i" }, has =
+      "Debug Continue" }
     else
       keys[#keys + 1] =
       { "<C-.>", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v", "i" }, has = "codeAction" }
