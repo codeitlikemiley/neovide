@@ -192,6 +192,8 @@ return get_configurations
 
 <kbd>CMD</kbd> + <kbd>F3</kbd> === `Toggle Document Diagnostics`
 
+<kbd>CMD</kbd> + <kbd>F4</kbd> === `Toggle Test Summary`
+
 <kbd>CMD</kbd> + <kbd>F5</kbd> === `Reload VimRC`
 
 <kbd>CMD</kbd> + <kbd>Y</kbd> === `RustParentModule`
