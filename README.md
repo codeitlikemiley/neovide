@@ -54,7 +54,7 @@ Must Have Installed, check the link on how to install it
 
 #### Override Cargo Run/Test with Makefile
 
-Any Commands that extends Cargo e.g. `cargo-watch` , `cargo-leptos` or `dioxus-cli` can be forced to be used instead of `cargo run` or `cargo test` commands using a `Makefile`
+> Any Commands that extends Cargo e.g. `cargo-watch` , `cargo-leptos` or `dioxus-cli` can be forced to be used instead of `cargo run` or `cargo test` commands using a `Makefile`
 
 <details>
 <summary>
@@ -91,7 +91,7 @@ clean:
 
 #### Defining Debugger Configurations
 
-The DAP Configuration can be added on Root Folder of your project with a name `.dap_config` , you can place any `.lua` file here but it is important to remember the `Naming Convention` if you wanna add configuration for rust then name the file `rust.lua`
+> The DAP Configuration can be added on Root Folder of your project with a name `.dap_config` , you can place any `.lua` file here but it is important to remember the `Naming Convention` if you wanna add configuration for rust then name the file `rust.lua`
 
 > If you have created `.dap_config` folder with `rust.lua` inside it would load that **dap configuration**
 
