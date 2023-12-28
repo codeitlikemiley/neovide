@@ -584,4 +584,7 @@ Standalone
 </details>
 
 
+#### For Quickly Adding Snippets please use my [snip-cli](https://github.com/codeitlikemiley/snip-cli)
+
+
 #### [Solution to Known Issues with Neovide on Mac](https://github.com/neovide/neovide/discussions/1984)
