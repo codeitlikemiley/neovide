@@ -16,6 +16,12 @@ return {
         ':lua require("neotest").summary.toggle()<CR>',
         { silent = true, desc = "Toggle Test Summary" }
       )
+      vim.keymap.set(
+        "n",
+        "<D-F4>",
+        ':lua require("neotest").output_panel.toggle()<CR>',
+        { silent = true, desc = "Toggle Test Summary" }
+      )
     else
       vim.keymap.set(
         "n",
