@@ -6,7 +6,7 @@ return {
       --- run test on cursor moved to `cargo_run`
       vim.keymap.set(
         "n",
-        "<D-t>",
+        "<D-d>",
         ':lua require("neotest").run.run({strategy = "dap"})<CR>',
         { silent = true, desc = "Debug Test on Cursor" }
       )
