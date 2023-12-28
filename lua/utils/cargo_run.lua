@@ -1,53 +1,39 @@
 function cargo_run()
-  local cwd = vim.fn.getcwd()
+    local file_path = vim.fn.expand('%:p')
+    local makefile_path = get_makefile(file_path)
+    local makefile_valid = is_makefile_valid(makefile_path)
+    local is_test_context = is_file_in_test_context()
+    local crate_type = check_crate_type(file_path)
+    local package_name = get_package(file_path) or vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+    local bin_name = get_bin(file_path)
 
-  -- Check if Makefile is present
-  local makefile_path = cwd .. "/Makefile"
-  local makefile_exists = vim.fn.filereadable(makefile_path) ~= 0
-
-  -- Extract package and binary names from the current directory name
-  local package_name = vim.fn.fnamemodify(cwd, ":t")
-  local filename = vim.fn.expand("%:r")
-  local binary_name = vim.fn.fnamemodify(filename, ":t")
-
-  if binary_name == "main" then
-    binary_name = package_name
-  end
-
-  -- Read the entire file to check for test context
-  local bufnr = vim.api.nvim_get_current_buf()
-  local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
-
-  local is_test_context = false
-  local in_test_module = false
-  local cursor_pos = vim.api.nvim_win_get_cursor(0)
-  local cursor_line = cursor_pos[1]
-
-  for i, line in ipairs(lines) do
-    if line:match("^mod tests {") then
-      in_test_module = true
-    elseif in_test_module and line:match("^}%s*$") then
-      in_test_module = false
-    elseif in_test_module and (line:match("#%[test%]") or line:match("#%[cfg%(test%)%]")) and i >= cursor_line - 5 and i <= cursor_line + 5 then
-      is_test_context = true
-      break
+    -- Determine command based on context
+    local cmd
+    if is_test_context then
+        vim.cmd("lua require('neotest').run.run()")
+        return
+    elseif makefile_valid then
+        if crate_type == "bin" then
+            cmd = "make run"
+        elseif crate_type == "build" then
+            cmd = "make build"
+        else
+            print("Cannot run makefile for current opened file.")
+            return
+        end
+    else
+        if crate_type == "bin" then
+            cmd = "RUSTFLAGS='-A warnings' cargo run -p " .. package_name .. (bin_name and (" --bin " .. bin_name) or "")
+        elseif crate_type == "build" then
+            cmd = "RUSTFLAGS='-A warnings' cargo build -p " .. package_name
+        else
+            print("Cannot run cargo commands for current opened file.")
+            return
+        end
     end
-  end
 
-  -- Determine command based on context and Makefile presence
-  local cmd
-  if is_test_context then
-    vim.cmd("lua require('neotest').run.run()")
-    return
-  elseif makefile_exists then
-    -- cmd = "make run PACKAGE=" .. package_name .. " BINARY_NAME=" .. binary_name
-    cmd = "make run" .. "BIN=" ..binary_name
-  else
-    cmd = "RUSTFLAGS='-A warnings' cargo run -p " .. package_name .. " --bin " .. binary_name
-  end
-
-  vim.cmd(":new")
-  vim.cmd(":term " .. cmd)
+    vim.cmd(":new")
+    vim.cmd(":term " .. cmd)
 end
 
 return cargo_run
