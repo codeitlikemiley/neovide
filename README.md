@@ -52,34 +52,9 @@ Must Have Installed, check the link on how to install it
 
 > Note: if you forget keybindings just press SHIFT + SPACE
 
-<details>
-<summary>
- <strong> Ultimate Productivity Keybindings </strong>
-</summary>
-<br>
+#### Override Cargo Run/Test with Makefile
 
-### <strong>Show All Keymaps</strong>
-
-
-<kbd>SHIFT</kbd>+<kbd>SPACE</kbd> === `List and Search All Keymaps`
-
-Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> for different keymaps it is listed below
-
-### <strong>Testing:</strong>
-
-<kbd>F1</kbd> === `RustRunnables`
-
-<kbd>F3</kbd> === `RustDebuggables`
-
-<kbd>F5</kbd> === `Reload Workspace`
-
-
-
--- Mac Only
-
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run and Test`
-
-**Note** : This can Run any valid `bin` and any rust `package` and `build.rs` , if you need more flexibility you can create a `Makefile` and define a custom `run` and `build` workflow. You can placed your `Makefile` beside your `Cargo.toml` or if you wanna customized a `bin`  how it runs e.g. that `bin` is located inside a folder , you can place the `Makefile` on that same folder.
+Any Commands that extends Cargo e.g. `cargo-watch` , `cargo-leptos` or `dioxus-cli` can be forced to be used instead of `cargo run` or `cargo test` commands using a `Makefile`
 
 <details>
 <summary>
@@ -114,9 +89,9 @@ clean:
 ```
 </details>
 
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
+#### Defining Debugger Configurations
 
-<kbd>CMD</kbd> + <kbd>K</kbd> === `Debug Continue (mac)`
+The DAP Configuration can be added on Root Folder of your project with a name `.dap_config` , you can place any `.lua` file here but it is important to remember the `Naming Convention` if you wanna add configuration for rust then name the file `rust.lua`
 
 > If you have created `.dap_config` folder with `rust.lua` inside it would load that **dap configuration**
 
@@ -156,6 +131,35 @@ end
 return get_configurations
 ```
 </details>
+
+<details>
+<summary>
+ <strong> Ultimate Productivity Keybindings </strong>
+</summary>
+<br>
+
+### <strong>Show All Keymaps</strong>
+
+
+<kbd>SHIFT</kbd>+<kbd>SPACE</kbd> === `List and Search All Keymaps`
+
+Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> for different keymaps it is listed below
+
+### <strong>Testing:</strong>
+
+<kbd>F1</kbd> === `RustRunnables`
+
+<kbd>F3</kbd> === `RustDebuggables`
+
+<kbd>F5</kbd> === `Reload Workspace`
+
+-- Mac Only
+
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Smart Cargo Run and Test`
+
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
+
+<kbd>CMD</kbd> + <kbd>K</kbd> === `Debug Continue (mac)`
 
 <kbd>OPT</kbd> + <kbd>r</kbd> === `Cargo Bin Runner (mac)`
 
