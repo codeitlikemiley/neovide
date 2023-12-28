@@ -6,7 +6,7 @@ return {
   keys = function()
     -- Mac Specific Keymaps
     if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 and vim.fn.has("gui_running") == 1 then
-      vim.keymap.set("n", "<D-d>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
+      vim.keymap.set("n", "<D-b>", ":DapToggleBreakpoint<CR>", { silent = true, desc = "Toggle Breakpoint" })
       vim.keymap.set("n", "<D-j>", ":DapStepOver<CR>", { silent = true, desc = "Step Over" })
       vim.keymap.set("n", "<D-l>", ":DapStepInto<CR>", { silent = true, desc = "Step Into" })
       vim.keymap.set("n", "<D-h>", ":DapStepOut<CR>", { silent = true, desc = "Step Out" })
