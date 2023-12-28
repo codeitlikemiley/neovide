@@ -6,12 +6,11 @@
         "jit",
         "cargo_run",
         "is_workspace",
-        "get_package_name",
-        "find_makefile",
-        "get_makefile_path",
         "get_makefile",
         "get_package",
         "check_crate_type",
-        "is_file_in_test_context"
+        "is_file_in_test_context",
+        "is_makefile_valid",
+        "get_bin"
     ]
 }

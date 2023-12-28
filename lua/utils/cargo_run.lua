@@ -1,3 +1,9 @@
+local get_makefile = require("utils.package").get_makefile
+local is_file_in_test_context = require("utils.package").is_file_in_test_context
+local check_crate_type = require("utils.package").check_crate_type
+local get_package = require("utils.package").get_package
+local get_bin = require("utils.package").get_bin
+
 function cargo_run()
     local file_path = vim.fn.expand('%:p')
     local makefile_path = get_makefile(file_path)

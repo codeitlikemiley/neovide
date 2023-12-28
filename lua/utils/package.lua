@@ -75,6 +75,7 @@ function get_makefile(file_path)
 end
 
 function is_makefile_valid(makefile_path)
+    -- Return false if makefile_path is nil or file is not readable
     if not makefile_path or vim.fn.filereadable(makefile_path) == 0 then
         return false
     end
@@ -92,7 +93,6 @@ function is_makefile_valid(makefile_path)
 
     return has_run_target or has_build_target
 end
-
 
 function check_crate_type(file_path)
     local cwd = vim.fn.getcwd()
@@ -140,8 +140,6 @@ function check_crate_type(file_path)
 
     return nil -- Crate type could not be determined
 end
-
-
 
 function is_file_in_test_context()
     local bufnr = vim.api.nvim_get_current_buf()
@@ -229,7 +227,6 @@ function get_bin(file_path)
 
     return nil -- No matching bin entry found
 end
-
 
 return {
     is_workspace = is_workspace,
