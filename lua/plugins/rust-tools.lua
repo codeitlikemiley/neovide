@@ -22,27 +22,6 @@ return {
         -- standalone file support
         -- setting it to false may improve startup time
         standalone = false,
-        -- rust-analyzer settings
-        settings = {
-          -- to enable rust-analyzer settings visit:
-          -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-          ["rust-analyzer"] = {
-            -- enable clippy on save
-            checkOnSave = {
-              command = "clippy",
-            },
-            -- macro expansion configuration
-            procMacro = {
-              ignored = {
-                leptos_macro = {
-                  -- optional: --
-                  -- "component",
-                  "server",
-                },
-              },
-            },
-          },
-        },
       },
       dap = {
         adapter = adapter,

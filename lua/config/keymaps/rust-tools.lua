@@ -16,12 +16,12 @@ vim.g.rust_inlay_hints_enabled = true
 local custom_attach = function(_, bufnr)
   if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 then
     -- MacOS Keymaps
-    vim.keymap.set("n", "<D-i>", ":lua RustToggleInlayHints()<CR>", { silent = true, desc = "Rust Toggle Inlay Hints" })
+    vim.keymap.set("n", "<D-i>", RustToggleInlayHints, { silent = true, desc = "Rust Toggle Inlay Hints" })
     vim.keymap.set("n", "<D-m>", ":RustExpandMacro<CR>", { silent = true, desc = "Expand Rust Macro" })
     vim.keymap.set("n", "<D-y>", ":RustParentModule<CR>", { silent = true, desc = "Rust Parent Module" })
   elseif
-    vim.fn.has("unix") == 1 and vim.fn.exists("neovide") == 1
-    or vim.fn.has("win32") and vim.fn.exists("neovide") == 1
+      vim.fn.has("unix") == 1 and vim.fn.exists("neovide") == 1
+      or vim.fn.has("win32") and vim.fn.exists("neovide") == 1
   then
     -- Windows and Linux Keymaps
     vim.keymap.set("n", "<M-r>", cargo_run, { silent = true, desc = "Rust Run App" })
@@ -35,12 +35,7 @@ local custom_attach = function(_, bufnr)
   -- Function keys
   vim.keymap.set("n", "<F1>", ":RustRunnables<CR>", { silent = true, desc = "Rust Runnables" })
   vim.keymap.set("n", "<F3>", ":RustDebuggables<CR>", { silent = true, desc = "Rust Debuggables" })
-  vim.keymap.set(
-    "n",
-    "<F4>",
-    ':lua require("neotest").summary.toggle()<CR>',
-    { silent = true, desc = "Toggle Test Summary" }
-  )
+  vim.keymap.set("n", "<M-r>", cargo_bin, { silent = true, desc = "Execute Cargo Bin" })
   vim.keymap.set("n", "<F5>", ":RustReloadWorkspace<CR>", { silent = true, desc = "Reload Rust Workspace" })
 
 

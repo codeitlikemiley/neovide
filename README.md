@@ -65,22 +65,17 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>F3</kbd> === `RustDebuggables`
 
-<kbd>F4</kbd> === `Toggle Test Summary`
-
 <kbd>F5</kbd> === `Reload Workspace`
 
-<kbd>F11</kbd> === `Run Cargo Watch`
 
 
 -- Mac Only
 
-<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Cargo Run under cursor (mac)`
+<kbd>CMD</kbd> + <kbd>R</kbd> === `Rust Cargo Run / Test under cursor (mac)`
 
-<kbd>CMD</kbd> + <kbd>T</kbd> === `Run Test Under Cursor (mac)`
+<kbd>CMD</kbd> + <kbd>T</kbd> === `Debug Test Under Cursor (mac)`
 
-<kbd>CMD</kbd> + <kbd>X</kbd> === `Debug Test Under Cursor (mac)`
-
-<kbd>CMD</kbd> + <kbd>W</kbd> === `Cargo Bin Runner (mac)`
+<kbd>OPT</kbd> + <kbd>r</kbd> === `Cargo Bin Runner (mac)`
 
 
 > This would list all commands in your `.cargo/bin` , and you can `pick` and `run` commands
@@ -103,15 +98,17 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 
 
-<kbd>CMD</kbd> + <kbd>F1</kbd> === `Step Over`
+<kbd>CMD</kbd> + <kbd>J</kbd> === `Step Over`
 
-<kbd>CMD</kbd> + <kbd>F2</kbd> === `Step Into`
+<kbd>CMD</kbd> + <kbd>L</kbd> === `Step Into`
 
-<kbd>CMD</kbd> + <kbd>F3</kbd> === `Step Out`
+<kbd>CMD</kbd> + <kbd>H</kbd> === `Step Out`
 
-<kbd>CMD</kbd> + <kbd>F4</kbd> === `Continue`
+<kbd>OPT</kbd> + <kbd>S</kbd> === `Continue`
 
-<kbd>CMD</kbd> + <kbd>i</kbd> === `Rust Toggle Inlay Hints`
+<kbd>F8</kbd>  === `Dap Terminate`
+
+<kbd>CMD</kbd> + <kbd>I</kbd> === `Rust Toggle Inlay Hints`
 
 -- Mac Only
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Toggle Breakpoint (mac)`
@@ -126,8 +123,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 <kbd>CMD</kbd> + <kbd>S</kbd> === `Save`
 
 <kbd>CMD</kbd> + <kbd>V</kbd> === `Paste`
-
-<kbd>CMD</kbd> + <kbd>Y</kbd> === `Redo`
 
 <kbd>CMD</kbd> + <kbd>Z</kbd> === `Undo`
 
@@ -152,9 +147,17 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>N</kbd> === `New Tab`
 
+<kbd>CMD</kbd> + <kbd>Y</kbd> === `Rust Parent Module`
+
 <kbd>CMD</kbd> + <kbd>[1-9]</kbd> === `Switch Tab [1-9]`
 
-<kbd>CMD</kbd> + <kbd>B</kbd> === `Toggle Sidebar`
+<kbd>CMD</kbd> + <kbd>F1</kbd> === `Toggle Sidebar`
+
+<kbd>CMD</kbd> + <kbd>F2</kbd> === `Neotest Summary`
+
+<kbd>CMD</kbd> + <kbd>F3</kbd> === `Toggle Document Diagnostics`
+
+<kbd>CMD</kbd> + <kbd>F5</kbd> === `Reload VimRC`
 
 <kbd>CMD</kbd> + <kbd>Y</kbd> === `RustParentModule`
 
@@ -166,21 +169,17 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>F</kbd> === `Find Everything on Workspace`
 
-<kbd>OPT</kbd> + <kbd>F</kbd> === `Find on Files (CWD)`
-
 <kbd>CMD</kbd> + <kbd>G</kbd> === `Open Lazy Git`
 
-<kbd>OPT</kbd> + <kbd>G</kbd> === `Diff File History`
+<kbd>OPT</kbd> + <kbd>D</kbd> === `Diff File History`
 
-<kbd>CMD</kbd> + <kbd>O</kbd> === `Go to Symbols on Workspace`
-
-<kbd>OPT</kbd> + <kbd>O</kbd> === `Go to Symbols on Current Open File`
+<kbd>CMD</kbd> + <kbd>O</kbd> === `Go to Symbols on Current Open File`
 
 <kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
 
-<kbd>CTRL</kbd> + <kbd>R</kbd> === `Recent Files`
+<kbd>OPT</kbd> + <kbd>P</kbd> === `Telescope Diagnostics`
 
-<kbd>OPT</kbd> + <kbd>R</kbd> === `Recent (CWD)`
+<kbd>CMD</kbd> + <kbd>E</kbd> === `Recent Files(CWD)`
 
 
 ### <strong>Rust Leader Commands</strong>

@@ -9,11 +9,7 @@ local function find_files_on_workspace()
 end
 
 local function find_document_symbols()
-  telescope_builtin.lsp_document_symbols({ cwd = cwd })
-end
-
-local function find_dynamic_workspace_symbols()
-  telescope_builtin.lsp_dynamic_workspace_symbols({
+  telescope_builtin.lsp_document_symbols({
     cwd = cwd,
     symbols = {
       "Class",
@@ -26,7 +22,8 @@ local function find_dynamic_workspace_symbols()
       "Trait",
       "Field",
       "Property",
-    },
+      "Enum",
+    }
   })
 end
 
@@ -37,19 +34,14 @@ end
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    { "<M-d>", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
-    { "<M-S-d>", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
-    -- add a keymap to browse plugin files
-    { "<D-f>", Util.telescope("live_grep"), desc = "Find Everyting on Workspace" },
-    { "<M-f>", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
-    { "<D-g>", lazygit, desc = "Open Lazy Git" },
-    { "<M-g>", "::DiffviewFileHistory %<CR>", desc = "Diff File History" },
-    { "<D-o>", find_dynamic_workspace_symbols, desc = "Go to Symbol on Workspace" },
-    { "<M-o>", find_document_symbols, desc = "Go to Symbols on Current Open File" },
-    { "<D-p>", find_files_on_workspace, desc = "Open Files on Current Working Directory" },
-    { "<M-p>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-    { "<D-e>", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)", mode = { "n", "v", "i" } },
-    { "<S-space>", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-    { "<D-w>",  cargo_bin, desc = "Run All your Installed Cargo Commands" },
+    { "<D-F3>",    "<cmd>TroubleToggle document_diagnostics<cr>",        desc = "Document Diagnostics (Trouble)" },
+    { "<M-p>",     "<cmd>Telescope diagnostics<cr>",                     desc = "Workspace diagnostics" },
+    { "<D-f>",     Util.telescope("live_grep"),                          desc = "Find Everyting on Workspace" },
+    { "<D-g>",     lazygit,                                              desc = "Open Lazy Git" },
+    { "<M-d>",     ":DiffviewFileHistory %<CR>",                         desc = "Diff File History" },
+    { "<D-o>",     find_document_symbols,                                desc = "Go to Symbols on Current Open File" },
+    { "<D-p>",     find_files_on_workspace,                              desc = "Open Files on Current Working Directory" },
+    { "<D-e>",     Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)",                           mode = { "n", "v", "i" } },
+    { "<S-space>", "<cmd>Telescope keymaps<cr>",                         desc = "Key Maps" },
   },
 }
