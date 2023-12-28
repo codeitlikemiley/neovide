@@ -15,14 +15,15 @@ function cargo_run()
 
     -- Determine command based on context
     local cmd
+    local makefile_dir = makefile_path and vim.fn.fnamemodify(makefile_path, ":h") or nil
     if is_test_context then
         vim.cmd("lua require('neotest').run.run()")
         return
     elseif makefile_valid then
         if crate_type == "bin" then
-            cmd = "make run"
+            cmd = "make -C " .. makefile_dir .. " run"
         elseif crate_type == "build" then
-            cmd = "make build"
+            cmd = "make -C " .. makefile_dir .. " build"
         else
             print("Cannot run makefile for current opened file.")
             return
