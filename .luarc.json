@@ -12,6 +12,7 @@
         "is_file_in_test_context",
         "is_makefile_valid",
         "get_bin",
-        "load_all_dap_configurations"
+        "load_all_dap_configurations",
+        "cursor_near_codelens"
     ]
 }
