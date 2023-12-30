@@ -19,7 +19,6 @@ return {
       },
     },
     tools = {
-      reload_workspace_from_cargo_toml = true,
       on_initialized = function()
         vim.cmd([[
                augroup RustLSP
