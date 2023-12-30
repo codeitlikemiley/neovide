@@ -30,9 +30,9 @@ function cargo_run()
         end
     else
         if crate_type == "bin" then
-            cmd = "RUSTFLAGS='-A warnings' cargo run -p " .. package_name .. (bin_name and (" --bin " .. bin_name) or "")
+            cmd = "cargo run -p " .. package_name .. (bin_name and (" --bin " .. bin_name) or "")
         elseif crate_type == "build" then
-            cmd = "RUSTFLAGS='-A warnings' cargo build -p " .. package_name
+            cmd = "cargo build -p " .. package_name
         else
             print("Cannot run cargo commands for current opened file.")
             return
