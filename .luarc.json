@@ -13,6 +13,10 @@
         "is_makefile_valid",
         "get_bin",
         "load_all_dap_configurations",
-        "cursor_near_codelens"
+        "cursor_near_codelens",
+        "vscode"
+    ],
+    "diagnostics.disable": [
+        "need-check-nil"
     ]
 }
