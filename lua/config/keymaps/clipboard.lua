@@ -16,3 +16,4 @@ vim.keymap.set("i", "<S-F12>", '<ESC>l"+Pli') -- Paste insert mode
 vim.keymap.set("c", "<S-F12>", "<C-R>+<Space><BS>") -- Paste command mode
 vim.keymap.set("t", "<S-F12>", "<C-R>+") -- Paste terminal mode
 vim.keymap.set("!", "<S-F12>", "<C-R>+<Space><BS>") -- Paste on :! mode
+vim.keymap.set("x", "p", [["_dP]]) -- Copy on visual mode
