@@ -5,6 +5,7 @@
 
 -- Keymaps for quickly moving around panes and resizing panes
 require("config/keymaps/navigation") -- navigation panes with [CMD] + [h,j,k,l]
+require("config/keymaps/indent")
 require("config/keymaps/sidebar") -- [CMD] + b to toggle sidebar
 require("config/keymaps/split-windows") -- [vsp] and [sp]  split windows
 require("config/keymaps/resizepane") -- resize panes with -- . == . __ . and ++
