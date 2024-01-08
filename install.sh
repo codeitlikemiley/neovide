@@ -55,6 +55,10 @@ EOM
 	source ~/.zshrc
 	echo "Successfully appended to .zshrc."
 }
+# This will install lldb-vscode
+if ! command -v llvm &>/dev/null; then
+	$package_manager install llvm
+fi
 
 # Check for Neovim
 if ! command -v neovim &>/dev/null; then
