@@ -4,6 +4,8 @@ end
 
 vim.g.rust_clip_command = "xclip -selection clipboard"
 
+vim.opt.clipboard = "unnamedplus"
+
 if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.3
 
