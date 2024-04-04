@@ -10,6 +10,33 @@ return {
       -- standalone file support
       -- setting it to false may improve startup time
       standalone = false,
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+            loadOutDirsFromCheck = true,
+            runBuildScripts = true,
+          },
+          checkOnSave = {
+            allFeatures = true,
+            command = "clippy",
+            extraArgs = { "--no-deps" },
+          },
+          procMacro = {
+            enable = true,
+            ignored = {
+              ["async-trait"] = { "async_trait" },
+              ["napi-derive"] = { "napi" },
+              ["async-recursion"] = { "async_recursion" },
+              leptos_macro = {
+                -- optional: --
+                -- "component",
+                "server",
+              },
+            },
+          },
+        },
+      },
     },
     dap = {
       adapter = {
