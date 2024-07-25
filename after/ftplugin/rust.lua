@@ -43,6 +43,41 @@ vim.keymap.set(
   "n",
   "<D-F12>",
   function()
-  require("noice").cmd("pick")
+    require("noice").cmd("pick")
   end,
   { desc = "View all Notifications", buffer = bufnr })
+
+
+vim.keymap.set(
+  "n",
+  "<F1>",
+  function()
+    vim.cmd.RustLsp('runnables')
+  end,
+  { silent = true, desc = "Rust Runnables" })
+
+
+vim.keymap.set(
+  "n",
+  "<F3>",
+  function()
+    vim.cmd.RustLsp('debuggables')
+  end,
+  { silent = true, desc = "Rust Debuggables" })
+
+vim.keymap.set(
+  "n",
+  "<F5>",
+  function()
+    vim.cmd.RustLsp('reloadWorkspace')
+  end,
+  { silent = true, desc = "Reload Workspace" })
+
+
+vim.keymap.set(
+  "n",
+  "<F4>",
+  function()
+    vim.cmd.RustLsp('parentModule')
+  end,
+  { silent = true, desc = "Reload Workspace" })
