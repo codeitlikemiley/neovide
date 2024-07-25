@@ -2,7 +2,8 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable",
+    lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
@@ -10,7 +11,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim",                               import = "lazyvim.plugins" },
     -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     -- { import = "lazyvim.plugins.extras.coding.yanky" },
@@ -24,6 +25,53 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.test.core" },
     { import = "lazyvim.plugins.extras.editor.leap" },
     { import = "lazyvim.plugins.extras.vscode" },
+    {
+      'mrcjkb/rustaceanvim',
+      version = '^4', -- Recommended
+      init = function()
+        ---@type RustaceanOpts
+        vim.g.rustaceanvim = {
+          ---@type RustaceanToolsOpts
+          tools = {
+          },
+          ---@type RustaceanLspClientOpts
+          server = {
+            on_attach = function(client, bufnr)
+              -- you can also put keymaps in here
+            end,
+            default_settings = {
+              -- this is override if you have rust-analyzer.json on project root
+              ['rust-analyzer'] = {
+                checkOnSave = {
+                  command = "clippy",
+                },
+                procMacro = {
+                  enable = true,
+                  ignored = {
+                    ["async-trait"] = { "async_trait" },
+                    ["napi-derive"] = { "napi" },
+                    ["async-recursion"] = { "async_recursion" },
+                    leptos_macro = {
+                      -- optional: --
+                      -- "component",
+                      "server",
+                    },
+                  },
+                },
+                diagnostics = {
+                  disabled = { 'unresolved-proc-macro' },
+                },
+              },
+            },
+          },
+          ---@type RustaceanDapOpts
+          dap = {
+
+          },
+        }
+      end,
+      lazy = false, -- This plugin is already lazy
+    },
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
