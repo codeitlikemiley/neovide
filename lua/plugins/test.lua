@@ -18,7 +18,7 @@ return {
       )
       vim.keymap.set(
         "n",
-        "<D-F4>",
+        "<D-F5>",
         ':lua require("neotest").output_panel.toggle()<CR>',
         { silent = true, desc = "Toggle Test Summary" }
       )
