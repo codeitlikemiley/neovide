@@ -1,5 +1,4 @@
 # Rust IDE with Neovide for Lazy Vim Users
-
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
 
@@ -155,6 +154,8 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>F3</kbd> === `RustDebuggables`
 
+<kbd>F4</kbd> === `Rust Parent Module`
+
 <kbd>F5</kbd> === `Reload Workspace`
 
 -- Mac Only
@@ -225,7 +226,7 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>N</kbd> === `New Tab`
 
-<kbd>CMD</kbd> + <kbd>Y</kbd> === `Rust Parent Module`
+<kbd>CMD</kbd> + <kbd>Y</kbd> === `Rebuild Proc Macro`
 
 <kbd>CMD</kbd> + <kbd>[1-9]</kbd> === `Switch Tab [1-9]`
 
@@ -233,11 +234,13 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>F2</kbd> === `Neotest Summary`
 
-<kbd>CMD</kbd> + <kbd>F3</kbd> === `Toggle Document Diagnostics`
+<kbd>CMD</kbd> + <kbd>F3</kbd> === `Diff View File`
 
-<kbd>CMD</kbd> + <kbd>F4</kbd> === `Toggle Test Summary`
+<kbd>CMD</kbd> + <kbd>F4</kbd> === `Diff Close View`
 
-<kbd>CMD</kbd> + <kbd>F5</kbd> === `Reload VimRC`
+<kbd>CMD</kbd> + <kbd>F5</kbd> === `Toggle Test Summary`
+
+<kbd>CMD</kbd> + <kbd>F6</kbd> === `Reload VimRC`
 
 ## <strong>Telescope</strong>
 
@@ -258,28 +261,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 <kbd>OPT</kbd> + <kbd>P</kbd> === `Telescope Diagnostics`
 
 <kbd>CMD</kbd> + <kbd>E</kbd> === `Recent Files(CWD)`
-
-
-### <strong>Rust Leader Commands</strong>
-
-> Note: Leader Key is <kbd>space</kbd>
-
-| Key                           | Description                   | Mode  |
-|-------------------------------|-------------------------------|-------|
-| <code>&lt;leader&gt;rt</code> | Run Test Under Cursor         | **n** |
-| <code>&lt;leader&gt;rb</code> | Run All Cargo Bin Commands    | **n** |
-| <code>&lt;leader&gt;rr</code> | Rust Runnables                | **n** |
-| <code>&lt;leader&gt;rl</code> | List Test Summary             | **n** |
-| <code>&lt;leader&gt;rd</code> | Rust Debuggables              | **n** |
-| <code>&lt;leader&gt;rn</code> | Smart Cargo Run Under Cursor  | **n** |
-| <code>&lt;leader&gt;rm</code> | Rust Expand Macro             | **n** |
-| <code>&lt;leader&gt;rh</code> | Rust Disable Inlay Hints      | **n** |
-| <code>&lt;leader&gt;rH</code> | Rust Enable Inlay Hints       | **n** |
-| <code>&lt;leader&gt;ru</code> | Toggle Debug UI               | **n** |
-| <code>&lt;leader&gt;rs</code> | Rust Standalone Server        | **n** |
-| <code>&lt;leader&gt;rw</code> | Rust Cargo Watch              | **n** |
-| <code>&lt;leader&gt;rv</code> | Reload Vim Configuration      | **n** |
-| <code>&lt;leader&gt;dS</code> | Delete Swap Files             | **n** |
 
 <hr>
 
