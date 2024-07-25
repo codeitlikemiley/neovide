@@ -16,36 +16,6 @@ return -- LSP keymaps
   opts = {
     servers = {
       -- Ensure mason installs the server
-      rust_analyzer = {
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              allFeatures = true,
-              loadOutDirsFromCheck = true,
-              runBuildScripts = true,
-            },
-            -- Add clippy lints for Rust.
-            checkOnSave = {
-              allFeatures = true,
-              command = "clippy",
-              extraArgs = { "--no-deps" },
-            },
-            procMacro = {
-              enable = true,
-              ignored = {
-                ["async-trait"] = { "async_trait" },
-                ["napi-derive"] = { "napi" },
-                ["async-recursion"] = { "async_recursion" },
-                leptos_macro = {
-                  -- optional: --
-                  -- "component",
-                  "server",
-                },
-              },
-            },
-          },
-        },
-      },
       taplo = {
         keys = {
           {
@@ -63,10 +33,7 @@ return -- LSP keymaps
       },
     },
     setup = {
-      rust_analyzer = function(_, opts)
-        local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
-        ---     @diagnostic disable-next-line: undefined-field
-        require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
+      rust_analyzer = function()
         return true
       end,
     },
