@@ -12,9 +12,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim",                               import = "lazyvim.plugins" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
-    -- { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
@@ -31,14 +29,8 @@ require("lazy").setup({
       init = function()
         ---@type RustaceanOpts
         vim.g.rustaceanvim = {
-          ---@type RustaceanToolsOpts
-          tools = {
-          },
           ---@type RustaceanLspClientOpts
           server = {
-            on_attach = function(client, bufnr)
-              -- you can also put keymaps in here
-            end,
             default_settings = {
               -- this is override if you have rust-analyzer.json on project root
               ['rust-analyzer'] = {
@@ -63,10 +55,6 @@ require("lazy").setup({
                 },
               },
             },
-          },
-          ---@type RustaceanDapOpts
-          dap = {
-
           },
         }
       end,
