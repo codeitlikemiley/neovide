@@ -13,6 +13,27 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim",                               import = "lazyvim.plugins" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    {
+      import = "lazyvim.plugins.extras.coding.copilot-chat",
+      opts = function()
+        local user = vim.env.USER or "User"
+        user = user:sub(1, 1):upper() .. user:sub(2)
+        return {
+          model = "gpt-4o",
+          auto_insert_mode = true,
+          show_help = true,
+          question_header = "  " .. user .. " ",
+          answer_header = "  Copilot ",
+          window = {
+            width = 0.4,
+          },
+          selection = function(source)
+            local select = require("CopilotChat.select")
+            return select.visual(source) or select.buffer(source)
+          end,
+        }
+      end
+    },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
