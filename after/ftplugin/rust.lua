@@ -82,8 +82,8 @@ vim.keymap.set(
   end,
   { silent = true, desc = "Reload Workspace" })
 
-  vim.api.nvim_create_autocmd("BufEnter", {
-    callback = function()
-      vim.api.nvim_set_hl(0, "@lsp.type.enum", { fg = "#b681ef" })
-    end,
-  })
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "@lsp.type.enum", { fg = "#b681ef" })
+  end,
+})
