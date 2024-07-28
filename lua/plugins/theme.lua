@@ -7,6 +7,9 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+      overrides = {
+        ["@lsp.type.enum"] = { fg = "#b681ef" },
+      },
     },
   },
   {
