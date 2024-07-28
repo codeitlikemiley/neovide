@@ -256,11 +256,9 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 
 <kbd>CMD</kbd> + <kbd>T</kbd> === `Go to Workspace Symbols`
 
-<kbd>CMD</kbd> + <kbd>P</kbd> === `Open Files on Current Working Directory`
+<kbd>CMD</kbd> + <kbd>P</kbd> === `Open Recent Files`
 
-<kbd>OPT</kbd> + <kbd>P</kbd> === `Telescope Diagnostics`
-
-<kbd>CMD</kbd> + <kbd>E</kbd> === `Recent Files(CWD)`
+<kbd>CMD</kbd> + <kbd>E</kbd> === `Open Copilot Chat Actions`
 
 <hr>
 
