@@ -1,7 +1,7 @@
 # Rust IDE with Neovide for Lazy Vim Users
 > Better workflow , testing and debugging capability on your Next Rust Projects
 
-<img width="1512" alt="Screenshot 2024-07-28 at 9 29 44 AM" src="https://github.com/user-attachments/assets/c2f3f32c-112d-42d1-be5e-57659d83400b">
+<img width="1512" alt="Screenshot 2024-07-28 at 5 11 02 PM" src="https://github.com/user-attachments/assets/d739321b-79ed-4659-8b17-cbee41bdf8ef">
 
 
 **NOTE**: Only MacOS Keymaps Are Well Documented on this README.md , I have remove all examples for windows/linux.
