@@ -131,9 +131,6 @@ return get_configurations
 ```
 </details>
 
-### Run Any Cargo Commands
-
-You can do it by pressing <kbd>OPT</kbd>+ <kbd>R</kbd> , if would invoke the `cargo_bin` function and show all the Installed cargo commands available on your `~/.cargo/bin` directory , you can type any cargo commands and Run it.
 
 <details>
 <summary>
@@ -165,11 +162,6 @@ Note: For Mac <kbd>CMD</kbd> for Windows/Linux replace it with <kbd>ALT</kbd> fo
 <kbd>CMD</kbd> + <kbd>D</kbd> === `Debug Test Under Cursor (mac)`
 
 <kbd>CMD</kbd> + <kbd>K</kbd> === `Debug Continue (mac)`
-
-<kbd>OPT</kbd> + <kbd>R</kbd> === `Cargo Bin Runner (mac)`
-
-
-> This would list all commands in your `.cargo/bin` , and you can `pick` and `run` commands
 
 
 
